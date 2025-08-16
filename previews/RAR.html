@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" type="image/png" href="/sets/RAR-files/icon.png"/>
+	<link rel="stylesheet" href="/resources/header.css">
+	<title>RAR visual preview</title>
+	<style>
+		@font-face {
+			font-family: Beleren;
+			src: url('/resources/beleren.ttf');
+		}
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			overscroll-behavior: none;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.main-content {
+			position: relative;
+			width: 100%;
+			float: left;
+			z-index: 2;
+			justify-items: center;
+		}
+		.sidebar {
+			position: sticky;
+			top: 0;
+			display: none;
+			text-align: center;
+			padding-right: 3%;
+			z-index: 1;
+			justify-items: center;
+		}
+		.sidebar-container {
+			width: 80%;
+			max-width: 375px;
+			position: relative;
+		}
+		.sidebar-h-img {
+			display: none;
+			transform: rotate(90deg);
+			position: absolute;
+			left: 10%;
+			top: 10%;
+			width: 85%;
+		}
+		.sidebar-img {
+			vertical-align: middle;
+			width: 100%;
+		}
+		.close-btn {
+			background: url('/img/close.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 10%;
+			height: 10%;
+			border: none;
+			cursor: pointer;
+			position: absolute;
+			right: 4%;
+		}
+		.close-btn:hover {
+			background: url('/img/close-hover.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+		.grid-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			gap: 2px;
+			padding-left: 5%;
+			padding-right: 5%;
+			padding-bottom: 1%;
+			justify-items: center;
+			max-width: 1200px;
+		}
+		.grid-container img {
+			width: 100%;
+			height: auto;
+			display: block;
+			visibility: hidden;
+			cursor: pointer;
+		}
+		.banner {
+			width: 100%;
+			height: auto;
+			padding-top: 80px;
+			padding-bottom: 50px;
+		}
+		.logo {
+			display: block;
+			margin: auto;
+			max-width: 30%;
+			max-height: 320px;
+		}
+		.container {
+			position: relative;
+			width: 100%;
+		}
+		.container img {
+			width: 100%;
+			height: auto;
+		}
+		.flip-btn {
+			background: url('/img/flip.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 15%;
+			height: 11%;
+			cursor: pointer;
+			border: none;
+			position: absolute;
+			left: 50%;
+			top: 48%;
+			transform: translate(-50%, -50%);
+			opacity: 0.5;
+		}
+		.flip-btn:hover {
+			background: url('/img/flip-hover.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+		.dropdown {
+			background: rgba(23, 23, 23, 0.8);
+			border-radius: 8px;
+			position: absolute;
+			left: 10%;
+			width: fit-content;
+			margin: 20px 0;
+			padding: 5px 0;
+			display: flex;
+			flex-direction: column;
+			z-index: 3;
+		}
+		.dropdown .set-bar {
+			font-family: Beleren;
+			font-size: 20px;
+			text-decoration: none;
+			color: #e3e3e3;
+			display: flex;
+			gap: 10px;
+			align-items: center;
+			padding: 0 12px;
+			margin: 5px;
+		}
+		.dropdown .set-bar:hover {
+			background: rgba(163, 163, 163, 0.5);
+			color: #f3f3f3;
+		}
+		.dropdown .set-bar img {
+			width: 32px;
+		}
+		.dropdown .inactive {
+			height: 0px;
+			overflow: hidden;
+			margin: 0px 5px;
+		}
+		.preload-hidden {
+			display: none;
+		}
+		.addenda-container {
+			text-align: center;
+			width: fit-content;
+			max-width: 1200px;
+			padding: 0 5%;
+		}
+		/* This is here to enable the stickiness in a Float environment. I don't know why it works but it does */
+		.footer {
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<img class="preload-hidden" src="/img/dot.png" />
+	<img class="preload-hidden" src="/sets/RAR-files/logo.png" />
+	<img class="preload-hidden" src="/sets/RAR-files/icon.png" />
+		<div class="header">
+		<div class="search-grid">
+			<a href="/"><img class="sg-logo" src="/img/banner.png"></a>
+			<img class="sg-icon" src="/img/search.png">
+			<input type="text" inputmode="search" placeholder="Search ..." name="search" id="search" spellcheck="false" autocomplete="off" autocorrect="off" spellcheck="false">
+			<a href="/all-sets"><img src="/img/sets.png" class="sg-icon">Sets</a>
+			<a href="/deckbuilder"><img src="/img/deck.png" class="sg-icon">Deckbuilder</a>
+			<a onclick="randomCard()"><img src="/img/random.png" class="sg-icon">Random</a>
+		</div>
+	</div>
+
+	<div class="dropdown" onmouseenter="rolldown()" onmouseleave="rollup()">
+	
+		<a class="set-bar" href="RAR"><img src="/sets/RAR-files/icon.png">Ravnica: Resurgence</a>
+	
+		</div>
+		<div class="banner">
+		<img class="logo" src="/sets/RAR-files/logo.png">
+		</div>
+		<div class="main-content" id="main-content">
+			<div class="grid-container">
+					<div class="container"><img alt="/sets\RAR-files\img\12_MW01.jpg" id="12_MW01" data-flag="@X" onclick="openSidebar('12_MW01',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\42_MU01.jpg" id="42_MU01" data-flag="@X" onclick="openSidebar('42_MU01',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\72_MB01.jpg" id="72_MB01" data-flag="@X" onclick="openSidebar('72_MB01',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\102_MR01.jpg" id="102_MR01" data-flag="@X" onclick="openSidebar('102_MR01',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\132_MG01.jpg" id="132_MG01" data-flag="@X" onclick="openSidebar('132_MG01',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\13_MW02.jpg" id="13_MW02" data-flag="@X" onclick="openSidebar('13_MW02',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\43_MU02.jpg" id="43_MU02" data-flag="@X" onclick="openSidebar('43_MU02',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\73_MB02.jpg" id="73_MB02" data-flag="@X" onclick="openSidebar('73_MB02',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\103_MR02.jpg" id="103_MR02" data-flag="@X" onclick="openSidebar('103_MR02',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\133_MG02.jpg" id="133_MG02" data-flag="@X" onclick="openSidebar('133_MG02',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\14_RW01.jpg" id="14_RW01" data-flag="@X" onclick="openSidebar('14_RW01',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\44_RU01.jpg" id="44_RU01" data-flag="@X" onclick="openSidebar('44_RU01',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\74_RB01.jpg" id="74_RB01" data-flag="@X" onclick="openSidebar('74_RB01',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\104_RR01.jpg" id="104_RR01" data-flag="@X" onclick="openSidebar('104_RR01',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\134_RG01.jpg" id="134_RG01" data-flag="@X" onclick="openSidebar('134_RG01',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\15_RW02.jpg" id="15_RW02" data-flag="@X" onclick="openSidebar('15_RW02',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\45_RU02.jpg" id="45_RU02" data-flag="@X" onclick="openSidebar('45_RU02',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\75_RB02.jpg" id="75_RB02" data-flag="@X" onclick="openSidebar('75_RB02',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\105_RR02.jpg" id="105_RR02" data-flag="@X" onclick="openSidebar('105_RR02',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\135_RG02.jpg" id="135_RG02" data-flag="@X" onclick="openSidebar('135_RG02',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\16_RW03.jpg" id="16_RW03" data-flag="@X" onclick="openSidebar('16_RW03',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\46_RU03.jpg" id="46_RU03" data-flag="@X" onclick="openSidebar('46_RU03',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\76_RB03.jpg" id="76_RB03" data-flag="@X" onclick="openSidebar('76_RB03',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\106_RR03.jpg" id="106_RR03" data-flag="@X" onclick="openSidebar('106_RR03',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\136_RG03.jpg" id="136_RG03" data-flag="@X" onclick="openSidebar('136_RG03',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\17_RW04.jpg" id="17_RW04" data-flag="@X" onclick="openSidebar('17_RW04',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\47_RU04.jpg" id="47_RU04" data-flag="@X" onclick="openSidebar('47_RU04',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\77_RB04.jpg" id="77_RB04" data-flag="@X" onclick="openSidebar('77_RB04',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\107_RR04.jpg" id="107_RR04" data-flag="@X" onclick="openSidebar('107_RR04',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\137_RG04.jpg" id="137_RG04" data-flag="@X" onclick="openSidebar('137_RG04',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\18_RW05.jpg" id="18_RW05" data-flag="@X" onclick="openSidebar('18_RW05',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\48_RU05.jpg" id="48_RU05" data-flag="@X" onclick="openSidebar('48_RU05',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\78_RB05.jpg" id="78_RB05" data-flag="@X" onclick="openSidebar('78_RB05',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\108_RR05.jpg" id="108_RR05" data-flag="@X" onclick="openSidebar('108_RR05',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\138_RG05.jpg" id="138_RG05" data-flag="@X" onclick="openSidebar('138_RG05',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\19_RW06.jpg" id="19_RW06" data-flag="@X" onclick="openSidebar('19_RW06',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\49_RU06.jpg" id="49_RU06" data-flag="@X" onclick="openSidebar('49_RU06',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\79_RB06.jpg" id="79_RB06" data-flag="@X" onclick="openSidebar('79_RB06',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\109_RR06.jpg" id="109_RR06" data-flag="@X" onclick="openSidebar('109_RR06',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\139_RG06.jpg" id="139_RG06" data-flag="@X" onclick="openSidebar('139_RG06',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\20_UW01.jpg" id="20_UW01" data-flag="@X" onclick="openSidebar('20_UW01',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\50_UU01.jpg" id="50_UU01" data-flag="@X" onclick="openSidebar('50_UU01',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\80_UB01.jpg" id="80_UB01" data-flag="@X" onclick="openSidebar('80_UB01',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\110_UR01.jpg" id="110_UR01" data-flag="@X" onclick="openSidebar('110_UR01',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\140_UG01.jpg" id="140_UG01" data-flag="@X" onclick="openSidebar('140_UG01',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\21_UW02.jpg" id="21_UW02" data-flag="@X" onclick="openSidebar('21_UW02',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\51_UU02.jpg" id="51_UU02" data-flag="@X" onclick="openSidebar('51_UU02',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\81_UB02.jpg" id="81_UB02" data-flag="@X" onclick="openSidebar('81_UB02',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\111_UR02.jpg" id="111_UR02" data-flag="@X" onclick="openSidebar('111_UR02',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\141_UG02.jpg" id="141_UG02" data-flag="@X" onclick="openSidebar('141_UG02',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\22_UW03.jpg" id="22_UW03" data-flag="@X" onclick="openSidebar('22_UW03',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\52_UU03.jpg" id="52_UU03" data-flag="@X" onclick="openSidebar('52_UU03',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\82_UB03.jpg" id="82_UB03" data-flag="@X" onclick="openSidebar('82_UB03',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\112_UR03.jpg" id="112_UR03" data-flag="@X" onclick="openSidebar('112_UR03',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\142_UG03.jpg" id="142_UG03" data-flag="@X" onclick="openSidebar('142_UG03',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\23_UW04.jpg" id="23_UW04" data-flag="@X" onclick="openSidebar('23_UW04',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\53_UU04.jpg" id="53_UU04" data-flag="@X" onclick="openSidebar('53_UU04',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\83_UB04.jpg" id="83_UB04" data-flag="@X" onclick="openSidebar('83_UB04',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\113_UR04.jpg" id="113_UR04" data-flag="@X" onclick="openSidebar('113_UR04',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\143_UG04.jpg" id="143_UG04" data-flag="@X" onclick="openSidebar('143_UG04',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\24_UW05.jpg" id="24_UW05" data-flag="@X" onclick="openSidebar('24_UW05',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\54_UU05.jpg" id="54_UU05" data-flag="@X" onclick="openSidebar('54_UU05',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\84_UB05.jpg" id="84_UB05" data-flag="@X" onclick="openSidebar('84_UB05',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\114_UR05.jpg" id="114_UR05" data-flag="@X" onclick="openSidebar('114_UR05',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\144_UG05.jpg" id="144_UG05" data-flag="@X" onclick="openSidebar('144_UG05',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\25_UW06.jpg" id="25_UW06" data-flag="@X" onclick="openSidebar('25_UW06',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\55_UU06.jpg" id="55_UU06" data-flag="@X" onclick="openSidebar('55_UU06',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\85_UB06.jpg" id="85_UB06" data-flag="@X" onclick="openSidebar('85_UB06',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\115_UR06 Noncreature.jpg" id="115_UR06 Noncreature" data-flag="@X" onclick="openSidebar('115_UR06 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\145_UG06.jpg" id="145_UG06" data-flag="@X" onclick="openSidebar('145_UG06',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\26_UW07.jpg" id="26_UW07" data-flag="@X" onclick="openSidebar('26_UW07',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\56_UU07 Noncreature.jpg" id="56_UU07 Noncreature" data-flag="@X" onclick="openSidebar('56_UU07 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\86_UB07 Noncreature.jpg" id="86_UB07 Noncreature" data-flag="@X" onclick="openSidebar('86_UB07 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\116_UR07 Noncreature.jpg" id="116_UR07 Noncreature" data-flag="@X" onclick="openSidebar('116_UR07 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\146_UG07.jpg" id="146_UG07" data-flag="@X" onclick="openSidebar('146_UG07',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\27_UW08.jpg" id="27_UW08" data-flag="@X" onclick="openSidebar('27_UW08',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\57_UU08 Noncreature.jpg" id="57_UU08 Noncreature" data-flag="@X" onclick="openSidebar('57_UU08 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\87_UB08 Noncreature.jpg" id="87_UB08 Noncreature" data-flag="@X" onclick="openSidebar('87_UB08 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\117_UR08 Noncreature.jpg" id="117_UR08 Noncreature" data-flag="@X" onclick="openSidebar('117_UR08 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\147_UG08 Noncreature.jpg" id="147_UG08 Noncreature" data-flag="@X" onclick="openSidebar('147_UG08 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\28_UW09 Noncreature.jpg" id="28_UW09 Noncreature" data-flag="@X" onclick="openSidebar('28_UW09 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\58_UU09 Noncreature.jpg" id="58_UU09 Noncreature" data-flag="@X" onclick="openSidebar('58_UU09 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\88_UB09 Noncreature.jpg" id="88_UB09 Noncreature" data-flag="@X" onclick="openSidebar('88_UB09 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\118_UR09 Noncreature.jpg" id="118_UR09 Noncreature" data-flag="@X" onclick="openSidebar('118_UR09 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\148_UG09 Noncreature.jpg" id="148_UG09 Noncreature" data-flag="@X" onclick="openSidebar('148_UG09 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\29_UW10 Noncreature.jpg" id="29_UW10 Noncreature" data-flag="@X" onclick="openSidebar('29_UW10 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\59_UU10 Noncreature.jpg" id="59_UU10 Noncreature" data-flag="@X" onclick="openSidebar('59_UU10 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\89_UB10 Noncreature.jpg" id="89_UB10 Noncreature" data-flag="@X" onclick="openSidebar('89_UB10 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\119_UR10 Noncreature.jpg" id="119_UR10 Noncreature" data-flag="@X" onclick="openSidebar('119_UR10 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\149_UG10 Noncreature.jpg" id="149_UG10 Noncreature" data-flag="@X" onclick="openSidebar('149_UG10 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\30_UW11 Noncreature.jpg" id="30_UW11 Noncreature" data-flag="@X" onclick="openSidebar('30_UW11 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\60_UU11 Bifurcation.jpg" id="60_UU11 Bifurcation" data-flag="@X" onclick="openSidebar('60_UU11 Bifurcation',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\90_UB11 Noncreature.jpg" id="90_UB11 Noncreature" data-flag="@X" onclick="openSidebar('90_UB11 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\120_UR11 Noncreature.jpg" id="120_UR11 Noncreature" data-flag="@X" onclick="openSidebar('120_UR11 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\150_UG11 Noncreature.jpg" id="150_UG11 Noncreature" data-flag="@X" onclick="openSidebar('150_UG11 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\1_CW01 Doomed Worshipper.jpg" id="1_CW01 Doomed Worshipper" data-flag="@X" onclick="openSidebar('1_CW01 Doomed Worshipper',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\31_CU01 Secret Collector.jpg" id="31_CU01 Secret Collector" data-flag="@X" onclick="openSidebar('31_CU01 Secret Collector',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\61_CB01 Syndic Collector.jpg" id="61_CB01 Syndic Collector" data-flag="@X" onclick="openSidebar('61_CB01 Syndic Collector',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\91_CR01 Legion Initiate.jpg" id="91_CR01 Legion Initiate" data-flag="@X" onclick="openSidebar('91_CR01 Legion Initiate',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\121_CG01 Gyre-Clade Technician.jpg" id="121_CG01 Gyre-Clade Technician" data-flag="@X" onclick="openSidebar('121_CG01 Gyre-Clade Technician',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\2_CW02 Blessing Hoarder.jpg" id="2_CW02 Blessing Hoarder" data-flag="@X" onclick="openSidebar('2_CW02 Blessing Hoarder',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\32_CU02 Bane Alley Sidestepper.jpg" id="32_CU02 Bane Alley Sidestepper" data-flag="@X" onclick="openSidebar('32_CU02 Bane Alley Sidestepper',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\62_CB02 Fiend's Crawl Stalker.jpg" id="62_CB02 Fiends Crawl Stalker" data-flag="@X" onclick="openSidebar('62_CB02 Fiends Crawl Stalker',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\92_CR02 Firefist Charger.jpg" id="92_CR02 Firefist Charger" data-flag="@X" onclick="openSidebar('92_CR02 Firefist Charger',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\122_CG02 Hull-Clade Infantry.jpg" id="122_CG02 Hull-Clade Infantry" data-flag="@X" onclick="openSidebar('122_CG02 Hull-Clade Infantry',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\3_CW03 Wojek Skyknight.jpg" id="3_CW03 Wojek Skyknight" data-flag="@X" onclick="openSidebar('3_CW03 Wojek Skyknight',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\33_CU03 Crypsis Clade Vanguard.jpg" id="33_CU03 Crypsis Clade Vanguard" data-flag="@X" onclick="openSidebar('33_CU03 Crypsis Clade Vanguard',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\63_CB03 Dimir Neuromancer.jpg" id="63_CB03 Dimir Neuromancer" data-flag="@X" onclick="openSidebar('63_CB03 Dimir Neuromancer',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\93_CR03 Flame-Kin Brigadier.jpg" id="93_CR03 Flame-Kin Brigadier" data-flag="@X" onclick="openSidebar('93_CR03 Flame-Kin Brigadier',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\123_CG03 Clan Initiate.jpg" id="123_CG03 Clan Initiate" data-flag="@X" onclick="openSidebar('123_CG03 Clan Initiate',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\4_CW04 Syndicate Initiate.jpg" id="4_CW04 Syndicate Initiate" data-flag="@X" onclick="openSidebar('4_CW04 Syndicate Initiate',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\34_CU04 Placid Skyskimmer.jpg" id="34_CU04 Placid Skyskimmer" data-flag="@X" onclick="openSidebar('34_CU04 Placid Skyskimmer',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\64_CB04 House Initiate.jpg" id="64_CB04 House Initiate" data-flag="@X" onclick="openSidebar('64_CB04 House Initiate',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\94_CR04 Reborn Beast-Friend.jpg" id="94_CR04 Reborn Beast-Friend" data-flag="@X" onclick="openSidebar('94_CR04 Reborn Beast-Friend',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\124_CG04 Scuttling Spicrabopus.jpg" id="124_CG04 Scuttling Spicrabopus" data-flag="@X" onclick="openSidebar('124_CG04 Scuttling Spicrabopus',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\5_CW05 Luminous Piker.jpg" id="5_CW05 Luminous Piker" data-flag="@X" onclick="openSidebar('5_CW05 Luminous Piker',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\35_CU05 Combine Initiate.jpg" id="35_CU05 Combine Initiate" data-flag="@X" onclick="openSidebar('35_CU05 Combine Initiate',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\65_CB05 Transaction Observer.jpg" id="65_CB05 Transaction Observer" data-flag="@X" onclick="openSidebar('65_CB05 Transaction Observer',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\95_CR05 Bolrac-Clan Shaman.jpg" id="95_CR05 Bolrac-Clan Shaman" data-flag="@X" onclick="openSidebar('95_CR05 Bolrac-Clan Shaman',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\125_CG05 Zhur-Taa Invoker.jpg" id="125_CG05 Zhur-Taa Invoker" data-flag="@X" onclick="openSidebar('125_CG05 Zhur-Taa Invoker',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\6_CW06 Boros Flavour.jpg" id="6_CW06 Boros Flavour" data-flag="@X" onclick="openSidebar('6_CW06 Boros Flavour',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\36_CU06 Clandestine Gatefinder.jpg" id="36_CU06 Clandestine Gatefinder" data-flag="@X" onclick="openSidebar('36_CU06 Clandestine Gatefinder',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\66_CB06 Ominous Gatefinder.jpg" id="66_CB06 Ominous Gatefinder" data-flag="@X" onclick="openSidebar('66_CB06 Ominous Gatefinder',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\96_CR06 Disorderly Gatefinder.jpg" id="96_CR06 Disorderly Gatefinder" data-flag="@X" onclick="openSidebar('96_CR06 Disorderly Gatefinder',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\126_CG06 Mahovana Dryad.jpg" id="126_CG06 Mahovana Dryad" data-flag="@X" onclick="openSidebar('126_CG06 Mahovana Dryad',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\7_CW07 Gleaming Gatefinder.jpg" id="7_CW07 Gleaming Gatefinder" data-flag="@X" onclick="openSidebar('7_CW07 Gleaming Gatefinder',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\37_CU07 Shed the False Face.jpg" id="37_CU07 Shed the False Face" data-flag="@X" onclick="openSidebar('37_CU07 Shed the False Face',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\67_CB07 Looming Debt.jpg" id="67_CB07 Looming Debt" data-flag="@X" onclick="openSidebar('67_CB07 Looming Debt',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\97_CR07 Draw Steel.jpg" id="97_CR07 Draw Steel" data-flag="@X" onclick="openSidebar('97_CR07 Draw Steel',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\127_CG07 Colossal Gatefinder.jpg" id="127_CG07 Colossal Gatefinder" data-flag="@X" onclick="openSidebar('127_CG07 Colossal Gatefinder',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\8_CW08 Combat-related removal.jpg" id="8_CW08 Combat-related removal" data-flag="@X" onclick="openSidebar('8_CW08 Combat-related removal',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\38_CU08 Decode Thoughts.jpg" id="38_CU08 Decode Thoughts" data-flag="@X" onclick="openSidebar('38_CU08 Decode Thoughts',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\68_CB08 Profane.jpg" id="68_CB08 Profane" data-flag="@X" onclick="openSidebar('68_CB08 Profane',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\98_CR08 Wild Blows.jpg" id="98_CR08 Wild Blows" data-flag="@X" onclick="openSidebar('98_CR08 Wild Blows',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\128_CG08 Ancient Adephage.jpg" id="128_CG08 Ancient Adephage" data-flag="@X" onclick="openSidebar('128_CG08 Ancient Adephage',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\9_CW09 Banishing Light.jpg" id="9_CW09 Banishing Light" data-flag="@X" onclick="openSidebar('9_CW09 Banishing Light',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\39_CU09 Gateway Fair.jpg" id="39_CU09 Gateway Fair" data-flag="@X" onclick="openSidebar('39_CU09 Gateway Fair',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\69_CB09 Bleak Blessing.jpg" id="69_CB09 Bleak Blessing" data-flag="@X" onclick="openSidebar('69_CB09 Bleak Blessing',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\99_CR09 Reckless Smash.jpg" id="99_CR09 Reckless Smash" data-flag="@X" onclick="openSidebar('99_CR09 Reckless Smash',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\129_CG09 Begin the Trance.jpg" id="129_CG09 Begin the Trance" data-flag="@X" onclick="openSidebar('129_CG09 Begin the Trance',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\10_CW10 Ethereal Vitality.jpg" id="10_CW10 Ethereal Vitality" data-flag="@X" onclick="openSidebar('10_CW10 Ethereal Vitality',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\40_CU10 Anuran Adaptation.jpg" id="40_CU10 Anuran Adaptation" data-flag="@X" onclick="openSidebar('40_CU10 Anuran Adaptation',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\70_CB10 Rebuy.jpg" id="70_CB10 Rebuy" data-flag="@X" onclick="openSidebar('70_CB10 Rebuy',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\100_CR10 Abandon the Before.jpg" id="100_CR10 Abandon the Before" data-flag="@X" onclick="openSidebar('100_CR10 Abandon the Before',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\130_CG10 Plated Punch.jpg" id="130_CG10 Plated Punch" data-flag="@X" onclick="openSidebar('130_CG10 Plated Punch',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\11_CW11 Blinding Boon.jpg" id="11_CW11 Blinding Boon" data-flag="@X" onclick="openSidebar('11_CW11 Blinding Boon',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\41_CU11 Excytose.jpg" id="41_CU11 Excytose" data-flag="@X" onclick="openSidebar('41_CU11 Excytose',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\71_CB11 Revelation of Agony.jpg" id="71_CB11 Revelation of Agony" data-flag="@X" onclick="openSidebar('71_CB11 Revelation of Agony',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\101_CR11 Stray Bolt.jpg" id="101_CR11 Stray Bolt" data-flag="@X" onclick="openSidebar('101_CR11 Stray Bolt',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\131_CG11 Traverse the Rubblebelt.jpg" id="131_CG11 Traverse the Rubblebelt" data-flag="@X" onclick="openSidebar('131_CG11 Traverse the Rubblebelt',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="gold" class="anchor"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\173_MUB01.jpg" id="173_MUB01" data-flag="@X" onclick="openSidebar('173_MUB01',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\169_MRG01.jpg" id="169_MRG01" data-flag="@X" onclick="openSidebar('169_MRG01',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\174_MUB02.jpg" id="174_MUB02" data-flag="@X" onclick="openSidebar('174_MUB02',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\170_MRG02.jpg" id="170_MRG02" data-flag="@X" onclick="openSidebar('170_MRG02',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\192_RUB01.jpg" id="192_RUB01" data-flag="@X" onclick="openSidebar('192_RUB01',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\182_RRG01.jpg" id="182_RRG01" data-flag="@X" onclick="openSidebar('182_RRG01',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\193_RUB02.jpg" id="193_RUB02" data-flag="@X" onclick="openSidebar('193_RUB02',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\183_RRG02.jpg" id="183_RRG02" data-flag="@X" onclick="openSidebar('183_RRG02',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\194_RUB03.jpg" id="194_RUB03" data-flag="@X" onclick="openSidebar('194_RUB03',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\184_RRG03.jpg" id="184_RRG03" data-flag="@X" onclick="openSidebar('184_RRG03',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\195_RUB04.jpg" id="195_RUB04" data-flag="@X" onclick="openSidebar('195_RUB04',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\185_RRG04.jpg" id="185_RRG04" data-flag="@X" onclick="openSidebar('185_RRG04',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\196_RUB05.jpg" id="196_RUB05" data-flag="@X" onclick="openSidebar('196_RUB05',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\186_RRG05.jpg" id="186_RRG05" data-flag="@X" onclick="openSidebar('186_RRG05',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\235_RUB06 Hybrid.jpg" id="235_RUB06 Hybrid" data-flag="@X" onclick="openSidebar('235_RUB06 Hybrid',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\233_RRG06 Hybrid.jpg" id="233_RRG06 Hybrid" data-flag="@X" onclick="openSidebar('233_RRG06 Hybrid',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\217_UUB01 Recon Specialist.jpg" id="217_UUB01 Recon Specialist" data-flag="@X" onclick="openSidebar('217_UUB01 Recon Specialist',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\207_URG01 Battle-Trance Instigator.jpg" id="207_URG01 Battle-Trance Instigator" data-flag="@X" onclick="openSidebar('207_URG01 Battle-Trance Instigator',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\218_UUB03 Dinrova Abductor.jpg" id="218_UUB03 Dinrova Abductor" data-flag="@X" onclick="openSidebar('218_UUB03 Dinrova Abductor',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\208_URG02 Scab-Clan Firebrand.jpg" id="208_URG02 Scab-Clan Firebrand" data-flag="@X" onclick="openSidebar('208_URG02 Scab-Clan Firebrand',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\219_UUB04 Dimir Charm.jpg" id="219_UUB04 Dimir Charm" data-flag="@X" onclick="openSidebar('219_UUB04 Dimir Charm',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\209_URG04 Zhur-Taa Beast-Friend.jpg" id="209_URG04 Zhur-Taa Beast-Friend" data-flag="@X" onclick="openSidebar('209_URG04 Zhur-Taa Beast-Friend',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\220_UUB05 Muffle.jpg" id="220_UUB05 Muffle" data-flag="@X" onclick="openSidebar('220_UUB05 Muffle',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\210_URG05 Gruul Charm.jpg" id="210_URG05 Gruul Charm" data-flag="@X" onclick="openSidebar('210_URG05 Gruul Charm',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\221_UUB06 Noncreature.jpg" id="221_UUB06 Noncreature" data-flag="@X" onclick="openSidebar('221_UUB06 Noncreature',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\211_URG06 Pummel.jpg" id="211_URG06 Pummel" data-flag="@X" onclick="openSidebar('211_URG06 Pummel',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\246_UUB02 Goldbrid creature.jpg" id="246_UUB02 Goldbrid creature" data-flag="@X" onclick="openSidebar('246_UUB02 Goldbrid creature',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\240_URG03 Four-mana creature.jpg" id="240_URG03 Four-mana creature" data-flag="@X" onclick="openSidebar('240_URG03 Four-mana creature',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\247_UUB07 Canny Courier.jpg" id="247_UUB07 Canny Courier" data-flag="@X" onclick="openSidebar('247_UUB07 Canny Courier',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\241_URG07 Borborygmos' Guildmage.jpg" id="241_URG07 Borborygmos Guildmage" data-flag="@X" onclick="openSidebar('241_URG07 Borborygmos Guildmage',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\248_UUB08 Lazav's Guildmage.jpg" id="248_UUB08 Lazavs Guildmage" data-flag="@X" onclick="openSidebar('248_UUB08 Lazavs Guildmage',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\242_URG08 Tremendous Growth.jpg" id="242_URG08 Tremendous Growth" data-flag="@X" onclick="openSidebar('242_URG08 Tremendous Growth',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\160_CUB01 Three-mana creature.jpg" id="160_CUB01 Three-mana creature" data-flag="@X" onclick="openSidebar('160_CUB01 Three-mana creature',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\154_CRG01 Rubblebelt Rabble-Rouser.jpg" id="154_CRG01 Rubblebelt Rabble-Rouser" data-flag="@X" onclick="openSidebar('154_CRG01 Rubblebelt Rabble-Rouser',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\161_CUB02 Notion Rain.jpg" id="161_CUB02 Notion Rain" data-flag="@X" onclick="openSidebar('161_CUB02 Notion Rain',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\155_CRG02 Cindervine Kindler.jpg" id="155_CRG02 Cindervine Kindler" data-flag="@X" onclick="openSidebar('155_CRG02 Cindervine Kindler',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\162_CUB03 Gateway Ambush.jpg" id="162_CUB03 Gateway Ambush" data-flag="@X" onclick="openSidebar('162_CUB03 Gateway Ambush',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\156_CRG03 Savage Smash.jpg" id="156_CRG03 Savage Smash" data-flag="@X" onclick="openSidebar('156_CRG03 Savage Smash',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\230_CUB04 Stern Strongarm.jpg" id="230_CUB04 Stern Strongarm" data-flag="@X" onclick="openSidebar('230_CUB04 Stern Strongarm',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\228_CRG04 Wandering Trog.jpg" id="228_CRG04 Wandering Trog" data-flag="@X" onclick="openSidebar('228_CRG04 Wandering Trog',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\175_MWB01 Tomik Vrona, Advokist.jpg" id="175_MWB01 Tomik Vrona, Advokist" data-flag="@X" onclick="openSidebar('175_MWB01 Tomik Vrona, Advokist',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\171_MRW01.jpg" id="171_MRW01" data-flag="@X" onclick="openSidebar('171_MRW01',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\166_MGU01.jpg" id="166_MGU01" data-flag="@X" onclick="openSidebar('166_MGU01',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\176_MWB02 Kaya, Freed from Burdens.jpg" id="176_MWB02 Kaya, Freed from Burdens" data-flag="@X" onclick="openSidebar('176_MWB02 Kaya, Freed from Burdens',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\172_MRW02.jpg" id="172_MRW02" data-flag="@X" onclick="openSidebar('172_MRW02',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\167_MGU02.jpg" id="167_MGU02" data-flag="@X" onclick="openSidebar('167_MGU02',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\197_RWB01.jpg" id="197_RWB01" data-flag="@X" onclick="openSidebar('197_RWB01',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\187_RRW01.jpg" id="187_RRW01" data-flag="@X" onclick="openSidebar('187_RRW01',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\177_RGU01.jpg" id="177_RGU01" data-flag="@X" onclick="openSidebar('177_RGU01',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\198_RWB02.jpg" id="198_RWB02" data-flag="@X" onclick="openSidebar('198_RWB02',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\188_RRW02.jpg" id="188_RRW02" data-flag="@X" onclick="openSidebar('188_RRW02',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\178_RGU02.jpg" id="178_RGU02" data-flag="@X" onclick="openSidebar('178_RGU02',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\199_RWB03.jpg" id="199_RWB03" data-flag="@X" onclick="openSidebar('199_RWB03',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\189_RRW03.jpg" id="189_RRW03" data-flag="@X" onclick="openSidebar('189_RRW03',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\179_RGU03.jpg" id="179_RGU03" data-flag="@X" onclick="openSidebar('179_RGU03',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\200_RWB04.jpg" id="200_RWB04" data-flag="@X" onclick="openSidebar('200_RWB04',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\190_RRW04.jpg" id="190_RRW04" data-flag="@X" onclick="openSidebar('190_RRW04',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\180_RGU04.jpg" id="180_RGU04" data-flag="@X" onclick="openSidebar('180_RGU04',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\201_RWB05.jpg" id="201_RWB05" data-flag="@X" onclick="openSidebar('201_RWB05',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\191_RRW05.jpg" id="191_RRW05" data-flag="@X" onclick="openSidebar('191_RRW05',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\181_RGU05.jpg" id="181_RGU05" data-flag="@X" onclick="openSidebar('181_RGU05',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\236_RWB06 Hybrid.jpg" id="236_RWB06 Hybrid" data-flag="@X" onclick="openSidebar('236_RWB06 Hybrid',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\234_RRW06 Hybrid.jpg" id="234_RRW06 Hybrid" data-flag="@X" onclick="openSidebar('234_RRW06 Hybrid',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\232_RGU06 Hybrid.jpg" id="232_RGU06 Hybrid" data-flag="@X" onclick="openSidebar('232_RGU06 Hybrid',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\222_UWB01 Leeching Advokist.jpg" id="222_UWB01 Leeching Advokist" data-flag="@X" onclick="openSidebar('222_UWB01 Leeching Advokist',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\212_URW01 Paragon of Fortification.jpg" id="212_URW01 Paragon of Fortification" data-flag="@X" onclick="openSidebar('212_URW01 Paragon of Fortification',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\202_UGU01 Not!Gyre Engineer.jpg" id="202_UGU01 Not!Gyre Engineer" data-flag="@X" onclick="openSidebar('202_UGU01 Not!Gyre Engineer',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\223_UWB02 Blessing Broker.jpg" id="223_UWB02 Blessing Broker" data-flag="@X" onclick="openSidebar('223_UWB02 Blessing Broker',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\213_URW02 Ordruun Strategist.jpg" id="213_URW02 Ordruun Strategist" data-flag="@X" onclick="openSidebar('213_URW02 Ordruun Strategist',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\203_UGU02 Adapted Security.jpg" id="203_UGU02 Adapted Security" data-flag="@X" onclick="openSidebar('203_UGU02 Adapted Security',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\224_UWB04 Orzhov Charm.jpg" id="224_UWB04 Orzhov Charm" data-flag="@X" onclick="openSidebar('224_UWB04 Orzhov Charm',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\214_URW04 Boros Charm.jpg" id="214_URW04 Boros Charm" data-flag="@X" onclick="openSidebar('214_URW04 Boros Charm',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\204_UGU04 Bioengineered Calf.jpg" id="204_UGU04 Bioengineered Calf" data-flag="@X" onclick="openSidebar('204_UGU04 Bioengineered Calf',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\225_UWB05 Gift of Ascension.jpg" id="225_UWB05 Gift of Ascension" data-flag="@X" onclick="openSidebar('225_UWB05 Gift of Ascension',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\215_URW05 Rip Apart.jpg" id="215_URW05 Rip Apart" data-flag="@X" onclick="openSidebar('215_URW05 Rip Apart',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\205_UGU05 Simic Charm.jpg" id="205_UGU05 Simic Charm" data-flag="@X" onclick="openSidebar('205_UGU05 Simic Charm',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\226_UWB06 Kaya's Cunning.jpg" id="226_UWB06 Kayas Cunning" data-flag="@X" onclick="openSidebar('226_UWB06 Kayas Cunning',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\216_URW06 Stunning Directive.jpg" id="216_URW06 Stunning Directive" data-flag="@X" onclick="openSidebar('216_URW06 Stunning Directive',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\206_UGU06 Gather Materials.jpg" id="206_UGU06 Gather Materials" data-flag="@X" onclick="openSidebar('206_UGU06 Gather Materials',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\249_UWB03 Syndicate Soulbinder.jpg" id="249_UWB03 Syndicate Soulbinder" data-flag="@X" onclick="openSidebar('249_UWB03 Syndicate Soulbinder',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\243_URW03 Legion Swordmaster.jpg" id="243_URW03 Legion Swordmaster" data-flag="@X" onclick="openSidebar('243_URW03 Legion Swordmaster',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\237_UGU03 Goldbrid.jpg" id="237_UGU03 Goldbrid" data-flag="@X" onclick="openSidebar('237_UGU03 Goldbrid',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\250_UWB07 Tomik's Guildmage.jpg" id="250_UWB07 Tomiks Guildmage" data-flag="@X" onclick="openSidebar('250_UWB07 Tomiks Guildmage',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\244_URW07 Aurelia's Guildmage.jpg" id="244_URW07 Aurelias Guildmage" data-flag="@X" onclick="openSidebar('244_URW07 Aurelias Guildmage',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\238_UGU07 Vannifar's Guildmage.jpg" id="238_UGU07 Vannifars Guildmage" data-flag="@X" onclick="openSidebar('238_UGU07 Vannifars Guildmage',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\251_UWB08 Recall the Debtors.jpg" id="251_UWB08 Recall the Debtors" data-flag="@X" onclick="openSidebar('251_UWB08 Recall the Debtors',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\245_URW08 Firemanes' Grace.jpg" id="245_URW08 Firemanes Grace" data-flag="@X" onclick="openSidebar('245_URW08 Firemanes Grace',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\239_UGU08 Fin-Clade Deep-Creeper.jpg" id="239_UGU08 Fin-Clade Deep-Creeper" data-flag="@X" onclick="openSidebar('239_UGU08 Fin-Clade Deep-Creeper',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\163_CWB01 Graceful Consecrant.jpg" id="163_CWB01 Graceful Consecrant" data-flag="@X" onclick="openSidebar('163_CWB01 Graceful Consecrant',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\157_CRW01 Skyknight Legionnaire.jpg" id="157_CRW01 Skyknight Legionnaire" data-flag="@X" onclick="openSidebar('157_CRW01 Skyknight Legionnaire',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\151_CGU01 Three-mana creature.jpg" id="151_CGU01 Three-mana creature" data-flag="@X" onclick="openSidebar('151_CGU01 Three-mana creature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\164_CWB02 Grasping Thrull.jpg" id="164_CWB02 Grasping Thrull" data-flag="@X" onclick="openSidebar('164_CWB02 Grasping Thrull',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\158_CRW02 Legion Mage-Priest.jpg" id="158_CRW02 Legion Mage-Priest" data-flag="@X" onclick="openSidebar('158_CRW02 Legion Mage-Priest',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\152_CGU02 Four-mana creature.jpg" id="152_CGU02 Four-mana creature" data-flag="@X" onclick="openSidebar('152_CGU02 Four-mana creature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\165_CWB03 Visions of Gold.jpg" id="165_CWB03 Visions of Gold" data-flag="@X" onclick="openSidebar('165_CWB03 Visions of Gold',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\159_CRW03 Gleaming Bulwark.jpg" id="159_CRW03 Gleaming Bulwark" data-flag="@X" onclick="openSidebar('159_CRW03 Gleaming Bulwark',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\153_CGU03 Noncreature.jpg" id="153_CGU03 Noncreature" data-flag="@X" onclick="openSidebar('153_CGU03 Noncreature',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\231_CWB04 Unfeeling Ministrant.jpg" id="231_CWB04 Unfeeling Ministrant" data-flag="@X" onclick="openSidebar('231_CWB04 Unfeeling Ministrant',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\229_CRW04 Fresh-Faced Recruit.jpg" id="229_CRW04 Fresh-Faced Recruit" data-flag="@X" onclick="openSidebar('229_CRW04 Fresh-Faced Recruit',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\227_CGU04 Splintering Sentry.jpg" id="227_CGU04 Splintering Sentry" data-flag="@X" onclick="openSidebar('227_CGU04 Splintering Sentry',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\168_MM01.jpg" id="168_MM01" data-flag="@X" onclick="openSidebar('168_MM01',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="colorless" class="anchor"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\257_UC01.jpg" id="257_UC01" data-flag="@X" onclick="openSidebar('257_UC01',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\258_UC02.jpg" id="258_UC02" data-flag="@X" onclick="openSidebar('258_UC02',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\259_UC03.jpg" id="259_UC03" data-flag="@X" onclick="openSidebar('259_UC03',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\260_UC04.jpg" id="260_UC04" data-flag="@X" onclick="openSidebar('260_UC04',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\261_UC05.jpg" id="261_UC05" data-flag="@X" onclick="openSidebar('261_UC05',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\252_CC01 Boros Guidepost.jpg" id="252_CC01 Boros Guidepost" data-flag="@X" onclick="openSidebar('252_CC01 Boros Guidepost',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\253_CC02 Dimir Guidepost.jpg" id="253_CC02 Dimir Guidepost" data-flag="@X" onclick="openSidebar('253_CC02 Dimir Guidepost',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\254_CC03 Orzhov Guidepost.jpg" id="254_CC03 Orzhov Guidepost" data-flag="@X" onclick="openSidebar('254_CC03 Orzhov Guidepost',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\255_CC04 Gruul Guidepost.jpg" id="255_CC04 Gruul Guidepost" data-flag="@X" onclick="openSidebar('255_CC04 Gruul Guidepost',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\256_CC05 Simic Guidepost.jpg" id="256_CC05 Simic Guidepost" data-flag="@X" onclick="openSidebar('256_CC05 Simic Guidepost',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img data-alt_src="/sets\RAR-files\img\269_RL02 Dimir Waystation_back.jpg" alt="/sets\RAR-files\img\269_RL02 Dimir Waystation_front.jpg" id="269_RL02 Dimir Waystation" data-flag="@XD" onclick="openSidebar('269_RL02 Dimir Waystation',false)"><button class="flip-btn" onclick="imgFlip('269_RL02 Dimir Waystation')"></button></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img data-alt_src="/sets\RAR-files\img\271_RL04 Gruul Waystation_back.jpg" alt="/sets\RAR-files\img\271_RL04 Gruul Waystation_front.jpg" id="271_RL04 Gruul Waystation" data-flag="@XD" onclick="openSidebar('271_RL04 Gruul Waystation',false)"><button class="flip-btn" onclick="imgFlip('271_RL04 Gruul Waystation')"></button></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\274_UL02 Undercity Sewers.jpg" id="274_UL02 Undercity Sewers" data-flag="@X" onclick="openSidebar('274_UL02 Undercity Sewers',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\276_UL04 Commercial District.jpg" id="276_UL04 Commercial District" data-flag="@X" onclick="openSidebar('276_UL04 Commercial District',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\263_CL02 Dimir Guildgate.jpg" id="263_CL02 Dimir Guildgate" data-flag="@X" onclick="openSidebar('263_CL02 Dimir Guildgate',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\265_CL04 Gruul Guildgate.jpg" id="265_CL04 Gruul Guildgate" data-flag="@X" onclick="openSidebar('265_CL04 Gruul Guildgate',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img data-alt_src="/sets\RAR-files\img\270_RL03 Orzhov Waystation_back.jpg" alt="/sets\RAR-files\img\270_RL03 Orzhov Waystation_front.jpg" id="270_RL03 Orzhov Waystation" data-flag="@XD" onclick="openSidebar('270_RL03 Orzhov Waystation',false)"><button class="flip-btn" onclick="imgFlip('270_RL03 Orzhov Waystation')"></button></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img data-alt_src="/sets\RAR-files\img\268_RL01 Boros Waystation_back.jpg" alt="/sets\RAR-files\img\268_RL01 Boros Waystation_front.jpg" id="268_RL01 Boros Waystation" data-flag="@XD" onclick="openSidebar('268_RL01 Boros Waystation',false)"><button class="flip-btn" onclick="imgFlip('268_RL01 Boros Waystation')"></button></div>
+				<div class="container"><img data-alt_src="/sets\RAR-files\img\272_RL05 Simic Waystation_back.jpg" alt="/sets\RAR-files\img\272_RL05 Simic Waystation_front.jpg" id="272_RL05 Simic Waystation" data-flag="@XD" onclick="openSidebar('272_RL05 Simic Waystation',false)"><button class="flip-btn" onclick="imgFlip('272_RL05 Simic Waystation')"></button></div>
+				<div class="container"><img alt="/sets\RAR-files\img\275_UL03 Shadowy Backstreet.jpg" id="275_UL03 Shadowy Backstreet" data-flag="@X" onclick="openSidebar('275_UL03 Shadowy Backstreet',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\273_UL01 Elegant Parlor.jpg" id="273_UL01 Elegant Parlor" data-flag="@X" onclick="openSidebar('273_UL01 Elegant Parlor',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\277_UL05 Hedge Maze.jpg" id="277_UL05 Hedge Maze" data-flag="@X" onclick="openSidebar('277_UL05 Hedge Maze',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\264_CL03 Orzhov Guildgate.jpg" id="264_CL03 Orzhov Guildgate" data-flag="@X" onclick="openSidebar('264_CL03 Orzhov Guildgate',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\262_CL01 Boros Guildgate.jpg" id="262_CL01 Boros Guildgate" data-flag="@X" onclick="openSidebar('262_CL01 Boros Guildgate',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\266_CL05 Simic Guildgate.jpg" id="266_CL05 Simic Guildgate" data-flag="@X" onclick="openSidebar('266_CL05 Simic Guildgate',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\267_CL06 Gateway Thoroughfare.jpg" id="267_CL06 Gateway Thoroughfare" data-flag="@X" onclick="openSidebar('267_CL06 Gateway Thoroughfare',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\282_Forest.jpg" id="282_Forest" data-flag="@X" onclick="openSidebar('282_Forest',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\279_Island.jpg" id="279_Island" data-flag="@X" onclick="openSidebar('279_Island',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\281_Mountain.jpg" id="281_Mountain" data-flag="@X" onclick="openSidebar('281_Mountain',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\278_Plains.jpg" id="278_Plains" data-flag="@X" onclick="openSidebar('278_Plains',false)"></div>
+				<div class="container"><img alt="/sets\RAR-files\img\280_Swamp.jpg" id="280_Swamp" data-flag="@X" onclick="openSidebar('280_Swamp',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+	</div>
+	</div>
+	<div class="sidebar" id="sidebar">
+		<div class="sidebar-container">
+			<img id="sidebar_img" class="sidebar-img" src="/img/er.png">
+			<img id="sidebar_h_img" class="sidebar-h-img">
+			<button class="flip-btn" id="sidebar-flip-btn" onclick="imgFlip('sidebar_img')"></button>
+		</div>
+		<button class="close-btn" onclick="closeSidebar()"></button>
+	</div>
+	<div class="footer"></div>
+
+	<script>
+	const delay = ms => new Promise(res => setTimeout(res, ms));
+		let specialchars = "";
+
+	document.addEventListener('DOMContentLoaded', async function() {
+		await fetch('/lists/all-cards.json')
+					.then(response => response.json())
+					.then(json => {
+						card_list = json;
+				}).catch(error => console.error('Error:', error));
+
+				await fetch('/resources/replacechars.txt')
+					.then(response => response.text())
+					.then(text => {
+						specialchars = text; 
+				}).catch(error => console.error('Error:', error));
+
+				card_list_arrayified = card_list.cards;
+
+		preloadImgs = document.getElementsByClassName('preload-hidden');
+
+		let images_loaded = [];
+
+		do {
+			await delay(100);
+			images_loaded = []
+			for (const img of preloadImgs)
+			{
+				images_loaded.push(isImageOk(img));
+			}
+		}
+		while (images_loaded.includes(false));
+
+		
+		loadImages();
+	});
+
+	function isImageOk(img) {
+		if (!img.complete || img.naturalWidth == 0) {
+			return false;
+		}
+
+		return true;
+	}
+
+	function loadImages() {
+		const images = document.querySelectorAll('.grid-container img');
+
+		images.forEach(img => {
+			const flag = img.getAttribute('data-flag');
+
+			if (flag === '@N') {
+				img.src = '/img/card_back.png';
+				img.removeAttribute("onclick");
+				img.style.cursor = 'default';
+			}
+			else
+			{
+				img.src = img.alt;
+
+				if (flag === '@E') {
+					img.removeAttribute("onclick");
+					img.style.cursor = 'default';
+				}
+			}
+
+			img.style.visibility = 'visible';
+		});
+	}
+
+	window.addEventListener('resize', function(event) {
+		setSidebarTop();
+	}, true);
+
+	function setSidebarTop() {
+		let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+		let sh = document.getElementById('sidebar').offsetHeight;
+		let height = 100 * ((vh - sh) / 2) / vh;
+		document.getElementById('sidebar').style.top = height + '%';
+	}
+
+	let horizontal = false;
+
+	function imgFlip(num) {
+		tmp = document.getElementById(num).src;
+		console.log(num);
+		document.getElementById(num).src = document.getElementById(num).dataset.alt_src;
+		document.getElementById(num).dataset.alt_src = tmp;
+
+		if (num == 'sidebar_img')
+		{
+			const rotated_img = document.getElementById('sidebar_h_img');
+			const sidebar_img = document.getElementById('sidebar_img');
+
+			if (horizontal && rotated_img.style.display == 'none')
+			{
+				rotated_img.style.display = "block";
+				sidebar_img.style.filter = "blur(2px) brightness(0.7)";
+			}
+			else
+			{
+				rotated_img.style.display = "none";
+				sidebar_img.style.filter = "";
+			}
+		}
+	}
+
+	function openSidebar(id, h = false) {
+		horizontal = h;
+		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
+
+		document.getElementById('sidebar').style.display = 'grid';
+
+		const rotated_img = document.getElementById('sidebar_h_img');
+		const sidebar_img = document.getElementById('sidebar_img');
+
+		sidebar_img.src = document.getElementById(id).src;
+		rotated_img.src = document.getElementById(id).src.replace("_back", "_front");
+
+		if (horizontal && !sidebar_img.src.includes("_back"))
+		{
+			rotated_img.style.display = "block";
+			sidebar_img.style.filter = "blur(2px) brightness(0.7)";
+		}
+		else
+		{
+			rotated_img.style.display = "none";
+			sidebar_img.style.filter = "";
+		}
+
+		if (document.getElementById(id).dataset.alt_src)
+		{
+			document.getElementById('sidebar_img').dataset.alt_src = document.getElementById(id).dataset.alt_src;
+			document.getElementById('sidebar-flip-btn').style.display = 'block';
+		}
+		else
+		{
+			delete document.getElementById('sidebar_img').dataset.alt_src;
+			document.getElementById('sidebar-flip-btn').style.display = 'none';
+		}
+		document.getElementById('main-content').style.width = '60%';
+
+		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
+		window.scrollTo(window.scrollX, scroll_pos);
+		setSidebarTop();
+	}
+
+	function closeSidebar() {
+		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
+
+		document.getElementById('sidebar').style.display = 'none';
+		document.getElementById('main-content').style.width = '100%';
+
+
+		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
+		window.scrollTo(window.scrollX, scroll_pos);
+	}
+
+	function rolldown() {
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "auto";
+			set.style.margin = "5px";
+		}
+	}
+
+	function rollup() {
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "0px";
+			set.style.margin = "0px 5px";
+		}
+	}
+
+	document.getElementById("search").addEventListener("keypress", function(event) {
+		if (event.key === "Enter") {
+			event.preventDefault();
+			search();
+		}
+	});
+
+	function search() {
+		const url = new URL('search', window.location.origin);
+		url.searchParams.append('search', document.getElementById("search").value);
+		window.location.href = url;
+	}
+
+		function randomCard() {
+				let i = Math.floor(Math.random() * (card_list_arrayified.length + 1));
+				let random_card = card_list_arrayified[i];
+
+				const url = new URL('card', window.location.origin);
+				const params = {
+					set: random_card.set,
+					num: random_card.number,
+					name: random_card.card_name
+				}
+				for (const key in params) {
+					url.searchParams.append(key, params[key]);
+				}
+
+				window.location.href = url;
+			}
+	</script>
+</body>
+</html>

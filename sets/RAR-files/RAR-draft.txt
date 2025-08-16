@@ -1,0 +1,3695 @@
+﻿[CustomCards]
+	[
+		{
+			"name": "CW01 Doomed Worshipper",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Creature — Human Cleric",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/1_CW01 Doomed Worshipper.jpg"
+			}
+		},
+		{
+			"name": "CW02 Blessing Hoarder",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Advisor",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/2_CW02 Blessing Hoarder.jpg"
+			}
+		},
+		{
+			"name": "CW03 Wojek Skyknight",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Human Knight",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/3_CW03 Wojek Skyknight.jpg"
+			}
+		},
+		{
+			"name": "CW05 Luminous Piker",
+			"rarity": "common",
+			"mana_cost": "{3}{W}",
+			"type": "Creature — Elemental Soldier",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/5_CW05 Luminous Piker.jpg"
+			}
+		},
+		{
+			"name": "CW04 Syndicate Initiate",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Human Cleric",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/4_CW04 Syndicate Initiate.jpg"
+			}
+		},
+		{
+			"name": "CW06 Boros Flavour",
+			"rarity": "common",
+			"mana_cost": "{4}{W}",
+			"type": "Creature — Giant Soldier",
+			"collector_number": "6",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/6_CW06 Boros Flavour.jpg"
+			}
+		},
+		{
+			"name": "CW07 Gleaming Gatefinder",
+			"rarity": "common",
+			"mana_cost": "{5}{W}",
+			"type": "Creature — Angel Soldier",
+			"collector_number": "7",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/7_CW07 Gleaming Gatefinder.jpg"
+			}
+		},
+		{
+			"name": "CW11 Blinding Boon",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Enchantment — Aura",
+			"collector_number": "11",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/11_CW11 Blinding Boon.jpg"
+			}
+		},
+		{
+			"name": "CW08 Combat-related removal",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Instant",
+			"collector_number": "8",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/8_CW08 Combat-related removal.jpg"
+			}
+		},
+		{
+			"name": "CW09 Banishing Light",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Enchantment",
+			"collector_number": "9",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/9_CW09 Banishing Light.jpg"
+			}
+		},
+		{
+			"name": "CW10 Ethereal Vitality",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Enchantment — Aura",
+			"collector_number": "10",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/10_CW10 Ethereal Vitality.jpg"
+			}
+		},
+		{
+			"name": "UW01",
+			"rarity": "uncommon",
+			"mana_cost": "{W}",
+			"type": "Creature",
+			"collector_number": "20",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/20_UW01.jpg"
+			}
+		},
+		{
+			"name": "UW02",
+			"rarity": "uncommon",
+			"mana_cost": "{W}",
+			"type": "Creature",
+			"collector_number": "21",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/21_UW02.jpg"
+			}
+		},
+		{
+			"name": "UW03",
+			"rarity": "uncommon",
+			"mana_cost": "{W}",
+			"type": "Creature",
+			"collector_number": "22",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/22_UW03.jpg"
+			}
+		},
+		{
+			"name": "UW04",
+			"rarity": "uncommon",
+			"mana_cost": "{W}",
+			"type": "Creature",
+			"collector_number": "23",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/23_UW04.jpg"
+			}
+		},
+		{
+			"name": "UW05",
+			"rarity": "uncommon",
+			"mana_cost": "{W}",
+			"type": "Creature",
+			"collector_number": "24",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/24_UW05.jpg"
+			}
+		},
+		{
+			"name": "UW06",
+			"rarity": "uncommon",
+			"mana_cost": "{W}",
+			"type": "Creature",
+			"collector_number": "25",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/25_UW06.jpg"
+			}
+		},
+		{
+			"name": "UW07",
+			"rarity": "uncommon",
+			"mana_cost": "{W}",
+			"type": "Creature",
+			"collector_number": "26",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/26_UW07.jpg"
+			}
+		},
+		{
+			"name": "UW08",
+			"rarity": "uncommon",
+			"mana_cost": "{W}",
+			"type": "Creature",
+			"collector_number": "27",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/27_UW08.jpg"
+			}
+		},
+		{
+			"name": "UW09 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{4}{W}",
+			"type": "Enchantment",
+			"collector_number": "28",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/28_UW09 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "UW10 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{W}",
+			"type": "",
+			"collector_number": "29",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/29_UW10 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "UW11 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{W}",
+			"type": "",
+			"collector_number": "30",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/30_UW11 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "CU02 Bane Alley Sidestepper",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Vedalken Rogue Wizard",
+			"collector_number": "32",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/32_CU02 Bane Alley Sidestepper.jpg"
+			}
+		},
+		{
+			"name": "CU01 Secret Collector",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Creature — Human Rogue",
+			"collector_number": "31",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/31_CU01 Secret Collector.jpg"
+			}
+		},
+		{
+			"name": "CU03 Crypsis Clade Vanguard",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Elf Octopus Warrior",
+			"collector_number": "33",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/33_CU03 Crypsis Clade Vanguard.jpg"
+			}
+		},
+		{
+			"name": "CU04 Placid Skyskimmer",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Fish",
+			"collector_number": "34",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/34_CU04 Placid Skyskimmer.jpg"
+			}
+		},
+		{
+			"name": "CU05 Combine Initiate",
+			"rarity": "common",
+			"mana_cost": "{4}{U}",
+			"type": "Creature — Elf Merfolk",
+			"collector_number": "35",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/35_CU05 Combine Initiate.jpg"
+			}
+		},
+		{
+			"name": "CU06 Clandestine Gatefinder",
+			"rarity": "common",
+			"mana_cost": "{5}{U}",
+			"type": "Creature — Shapeshifter",
+			"collector_number": "36",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/36_CU06 Clandestine Gatefinder.jpg"
+			}
+		},
+		{
+			"name": "CU07 Shed the False Face",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Instant",
+			"collector_number": "37",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/37_CU07 Shed the False Face.jpg"
+			}
+		},
+		{
+			"name": "CU08 Decode Thoughts",
+			"rarity": "common",
+			"mana_cost": "{1}{U}{U}",
+			"type": "Instant",
+			"collector_number": "38",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/38_CU08 Decode Thoughts.jpg"
+			}
+		},
+		{
+			"name": "CU09 Gateway Fair",
+			"rarity": "common",
+			"mana_cost": "{3}{U}",
+			"type": "Sorcery",
+			"collector_number": "39",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/39_CU09 Gateway Fair.jpg"
+			}
+		},
+		{
+			"name": "CU10 Anuran Adaptation",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Enchantment — Aura",
+			"collector_number": "40",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/40_CU10 Anuran Adaptation.jpg"
+			}
+		},
+		{
+			"name": "UU11 Bifurcation",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{U}",
+			"type": "Sorcery",
+			"collector_number": "60",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/60_UU11 Bifurcation.jpg"
+			}
+		},
+		{
+			"name": "UU01",
+			"rarity": "uncommon",
+			"mana_cost": "{U}",
+			"type": "Creature",
+			"collector_number": "50",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/50_UU01.jpg"
+			}
+		},
+		{
+			"name": "UU02",
+			"rarity": "uncommon",
+			"mana_cost": "{U}",
+			"type": "Creature",
+			"collector_number": "51",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/51_UU02.jpg"
+			}
+		},
+		{
+			"name": "UU03",
+			"rarity": "uncommon",
+			"mana_cost": "{U}",
+			"type": "Creature",
+			"collector_number": "52",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/52_UU03.jpg"
+			}
+		},
+		{
+			"name": "UU04",
+			"rarity": "uncommon",
+			"mana_cost": "{U}",
+			"type": "Creature",
+			"collector_number": "53",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/53_UU04.jpg"
+			}
+		},
+		{
+			"name": "UU05",
+			"rarity": "uncommon",
+			"mana_cost": "{U}",
+			"type": "Creature",
+			"collector_number": "54",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/54_UU05.jpg"
+			}
+		},
+		{
+			"name": "UU07 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{U}",
+			"type": "",
+			"collector_number": "56",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/56_UU07 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "UU09 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{U}",
+			"type": "",
+			"collector_number": "58",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/58_UU09 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "UU08 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{U}",
+			"type": "",
+			"collector_number": "57",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/57_UU08 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "UU10 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{U}",
+			"type": "",
+			"collector_number": "59",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/59_UU10 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "UU06",
+			"rarity": "uncommon",
+			"mana_cost": "{U}",
+			"type": "Creature",
+			"collector_number": "55",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/55_UU06.jpg"
+			}
+		},
+		{
+			"name": "CB01 Syndic Collector",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Creature — Human Advisor Cleric",
+			"collector_number": "61",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/61_CB01 Syndic Collector.jpg"
+			}
+		},
+		{
+			"name": "CB03 Dimir Neuromancer",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Human Wizard",
+			"collector_number": "63",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/63_CB03 Dimir Neuromancer.jpg"
+			}
+		},
+		{
+			"name": "CB02 Fiend's Crawl Stalker",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Vampire Assassin",
+			"collector_number": "62",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/62_CB02 Fiend's Crawl Stalker.jpg"
+			}
+		},
+		{
+			"name": "CB04 House Initiate",
+			"rarity": "common",
+			"mana_cost": "{3}{B}",
+			"type": "Creature — Goblin Rogue",
+			"collector_number": "64",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/64_CB04 House Initiate.jpg"
+			}
+		},
+		{
+			"name": "CB05 Transaction Observer",
+			"rarity": "common",
+			"mana_cost": "{4}{B}",
+			"type": "Creature — Zombie Bird",
+			"collector_number": "65",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/65_CB05 Transaction Observer.jpg"
+			}
+		},
+		{
+			"name": "CB06 Ominous Gatefinder",
+			"rarity": "common",
+			"mana_cost": "{5}{B}",
+			"type": "Creature — Spirit",
+			"collector_number": "66",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/66_CB06 Ominous Gatefinder.jpg"
+			}
+		},
+		{
+			"name": "CB07 Looming Debt",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Enchantment — Aura",
+			"collector_number": "67",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/67_CB07 Looming Debt.jpg"
+			}
+		},
+		{
+			"name": "CB08 Profane",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Sorcery",
+			"collector_number": "68",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/68_CB08 Profane.jpg"
+			}
+		},
+		{
+			"name": "CB09 Bleak Blessing",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Enchantment — Aura",
+			"collector_number": "69",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/69_CB09 Bleak Blessing.jpg"
+			}
+		},
+		{
+			"name": "CB11 Revelation of Agony",
+			"rarity": "common",
+			"mana_cost": "{3}{B}",
+			"type": "Instant",
+			"collector_number": "71",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/71_CB11 Revelation of Agony.jpg"
+			}
+		},
+		{
+			"name": "CB10 Rebuy",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Sorcery",
+			"collector_number": "70",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/70_CB10 Rebuy.jpg"
+			}
+		},
+		{
+			"name": "UB01",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "Creature",
+			"collector_number": "80",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/80_UB01.jpg"
+			}
+		},
+		{
+			"name": "UB03",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "Creature",
+			"collector_number": "82",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/82_UB03.jpg"
+			}
+		},
+		{
+			"name": "UB02",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "Creature",
+			"collector_number": "81",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/81_UB02.jpg"
+			}
+		},
+		{
+			"name": "UB04",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "Creature",
+			"collector_number": "83",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/83_UB04.jpg"
+			}
+		},
+		{
+			"name": "UB05",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "Creature",
+			"collector_number": "84",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/84_UB05.jpg"
+			}
+		},
+		{
+			"name": "UB06",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "Creature",
+			"collector_number": "85",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/85_UB06.jpg"
+			}
+		},
+		{
+			"name": "UB08 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "",
+			"collector_number": "87",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/87_UB08 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "UB07 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "",
+			"collector_number": "86",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/86_UB07 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "UB09 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "",
+			"collector_number": "88",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/88_UB09 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "UB10 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "",
+			"collector_number": "89",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/89_UB10 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "UB11 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "",
+			"collector_number": "90",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/90_UB11 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "CR01 Legion Initiate",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human Soldier",
+			"collector_number": "91",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/91_CR01 Legion Initiate.jpg"
+			}
+		},
+		{
+			"name": "CR02 Firefist Charger",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Elf Wizard",
+			"collector_number": "92",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/92_CR02 Firefist Charger.jpg"
+			}
+		},
+		{
+			"name": "CR05 Bolrac-Clan Shaman",
+			"rarity": "common",
+			"mana_cost": "{4}{R}",
+			"type": "Creature — Goblin Rogue",
+			"collector_number": "95",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/95_CR05 Bolrac-Clan Shaman.jpg"
+			}
+		},
+		{
+			"name": "CR03 Flame-Kin Brigadier",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Elemental Soldier",
+			"collector_number": "93",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/93_CR03 Flame-Kin Brigadier.jpg"
+			}
+		},
+		{
+			"name": "CR04 Reborn Beast-Friend",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Human Warrior",
+			"collector_number": "94",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/94_CR04 Reborn Beast-Friend.jpg"
+			}
+		},
+		{
+			"name": "CR06 Disorderly Gatefinder",
+			"rarity": "common",
+			"mana_cost": "{5}{R}",
+			"type": "Creature — Giant Warrior",
+			"collector_number": "96",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/96_CR06 Disorderly Gatefinder.jpg"
+			}
+		},
+		{
+			"name": "CR07 Draw Steel",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Instant",
+			"collector_number": "97",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/97_CR07 Draw Steel.jpg"
+			}
+		},
+		{
+			"name": "CR08 Wild Blows",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Instant",
+			"collector_number": "98",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/98_CR08 Wild Blows.jpg"
+			}
+		},
+		{
+			"name": "CR09 Reckless Smash",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Instant",
+			"collector_number": "99",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/99_CR09 Reckless Smash.jpg"
+			}
+		},
+		{
+			"name": "CR10 Abandon the Before",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Enchantment",
+			"collector_number": "100",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/100_CR10 Abandon the Before.jpg"
+			}
+		},
+		{
+			"name": "CR11 Stray Bolt",
+			"rarity": "common",
+			"mana_cost": "{4}{R}",
+			"type": "Instant",
+			"collector_number": "101",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/101_CR11 Stray Bolt.jpg"
+			}
+		},
+		{
+			"name": "UR01",
+			"rarity": "uncommon",
+			"mana_cost": "{R}",
+			"type": "Creature",
+			"collector_number": "110",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/110_UR01.jpg"
+			}
+		},
+		{
+			"name": "UR02",
+			"rarity": "uncommon",
+			"mana_cost": "{R}",
+			"type": "Creature",
+			"collector_number": "111",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/111_UR02.jpg"
+			}
+		},
+		{
+			"name": "UR03",
+			"rarity": "uncommon",
+			"mana_cost": "{R}",
+			"type": "Creature",
+			"collector_number": "112",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/112_UR03.jpg"
+			}
+		},
+		{
+			"name": "UR04",
+			"rarity": "uncommon",
+			"mana_cost": "{R}",
+			"type": "Creature",
+			"collector_number": "113",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/113_UR04.jpg"
+			}
+		},
+		{
+			"name": "UR05",
+			"rarity": "uncommon",
+			"mana_cost": "{R}",
+			"type": "Creature",
+			"collector_number": "114",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/114_UR05.jpg"
+			}
+		},
+		{
+			"name": "UR06 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{R}",
+			"type": "",
+			"collector_number": "115",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/115_UR06 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "UR07 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{R}",
+			"type": "",
+			"collector_number": "116",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/116_UR07 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "UR08 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{R}",
+			"type": "",
+			"collector_number": "117",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/117_UR08 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "UR09 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{R}",
+			"type": "",
+			"collector_number": "118",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/118_UR09 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "UR10 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{R}",
+			"type": "",
+			"collector_number": "119",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/119_UR10 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "UR11 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{R}",
+			"type": "",
+			"collector_number": "120",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/120_UR11 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "CG01 Gyre-Clade Technician",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Elf Wizard",
+			"collector_number": "121",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/121_CG01 Gyre-Clade Technician.jpg"
+			}
+		},
+		{
+			"name": "CG02 Hull-Clade Infantry",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Elf Scorpion Warrior",
+			"collector_number": "122",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/122_CG02 Hull-Clade Infantry.jpg"
+			}
+		},
+		{
+			"name": "CG03 Clan Initiate",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Human Warrior",
+			"collector_number": "123",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/123_CG03 Clan Initiate.jpg"
+			}
+		},
+		{
+			"name": "CG04 Scuttling Spicrabopus",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Spider Crab Octopus",
+			"collector_number": "124",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/124_CG04 Scuttling Spicrabopus.jpg"
+			}
+		},
+		{
+			"name": "CG05 Zhur-Taa Invoker",
+			"rarity": "common",
+			"mana_cost": "{3}{G}",
+			"type": "Creature — Elf Shaman",
+			"collector_number": "125",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/125_CG05 Zhur-Taa Invoker.jpg"
+			}
+		},
+		{
+			"name": "CG06 Mahovana Dryad",
+			"rarity": "common",
+			"mana_cost": "{4}{G}",
+			"type": "Creature — Dryad",
+			"collector_number": "126",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/126_CG06 Mahovana Dryad.jpg"
+			}
+		},
+		{
+			"name": "CG07 Colossal Gatefinder",
+			"rarity": "common",
+			"mana_cost": "{5}{G}",
+			"type": "Creature — Salamander Mutant",
+			"collector_number": "127",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/127_CG07 Colossal Gatefinder.jpg"
+			}
+		},
+		{
+			"name": "CG08 Ancient Adephage",
+			"rarity": "common",
+			"mana_cost": "{5}{G}{G}",
+			"type": "Creature — Insect",
+			"collector_number": "128",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/128_CG08 Ancient Adephage.jpg"
+			}
+		},
+		{
+			"name": "CG10 Plated Punch",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Sorcery",
+			"collector_number": "130",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/130_CG10 Plated Punch.jpg"
+			}
+		},
+		{
+			"name": "CG11 Traverse the Rubblebelt",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Instant",
+			"collector_number": "131",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/131_CG11 Traverse the Rubblebelt.jpg"
+			}
+		},
+		{
+			"name": "CG09 Begin the Trance",
+			"rarity": "common",
+			"mana_cost": "{G}",
+			"type": "Instant",
+			"collector_number": "129",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/129_CG09 Begin the Trance.jpg"
+			}
+		},
+		{
+			"name": "UG03",
+			"rarity": "uncommon",
+			"mana_cost": "{G}",
+			"type": "Creature",
+			"collector_number": "142",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/142_UG03.jpg"
+			}
+		},
+		{
+			"name": "UG06",
+			"rarity": "uncommon",
+			"mana_cost": "{G}",
+			"type": "Creature",
+			"collector_number": "145",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/145_UG06.jpg"
+			}
+		},
+		{
+			"name": "UG07",
+			"rarity": "uncommon",
+			"mana_cost": "{G}",
+			"type": "Creature",
+			"collector_number": "146",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/146_UG07.jpg"
+			}
+		},
+		{
+			"name": "UG01",
+			"rarity": "uncommon",
+			"mana_cost": "{G}",
+			"type": "Creature",
+			"collector_number": "140",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/140_UG01.jpg"
+			}
+		},
+		{
+			"name": "UG05",
+			"rarity": "uncommon",
+			"mana_cost": "{G}",
+			"type": "Creature",
+			"collector_number": "144",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/144_UG05.jpg"
+			}
+		},
+		{
+			"name": "UG04",
+			"rarity": "uncommon",
+			"mana_cost": "{G}",
+			"type": "Creature",
+			"collector_number": "143",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/143_UG04.jpg"
+			}
+		},
+		{
+			"name": "UG02",
+			"rarity": "uncommon",
+			"mana_cost": "{G}",
+			"type": "Creature",
+			"collector_number": "141",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/141_UG02.jpg"
+			}
+		},
+		{
+			"name": "UG08 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{G}",
+			"type": "",
+			"collector_number": "147",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/147_UG08 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "UG09 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{G}",
+			"type": "",
+			"collector_number": "148",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/148_UG09 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "UG11 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{G}",
+			"type": "",
+			"collector_number": "150",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/150_UG11 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "UG10 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{G}",
+			"type": "",
+			"collector_number": "149",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/149_UG10 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "CC01 Boros Guidepost",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact",
+			"collector_number": "252",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/252_CC01 Boros Guidepost.jpg"
+			}
+		},
+		{
+			"name": "CC02 Dimir Guidepost",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact",
+			"collector_number": "253",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/253_CC02 Dimir Guidepost.jpg"
+			}
+		},
+		{
+			"name": "CC03 Orzhov Guidepost",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact",
+			"collector_number": "254",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/254_CC03 Orzhov Guidepost.jpg"
+			}
+		},
+		{
+			"name": "CC04 Gruul Guidepost",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact",
+			"collector_number": "255",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/255_CC04 Gruul Guidepost.jpg"
+			}
+		},
+		{
+			"name": "CC05 Simic Guidepost",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact",
+			"collector_number": "256",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/256_CC05 Simic Guidepost.jpg"
+			}
+		},
+		{
+			"name": "UC01",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Artifact",
+			"collector_number": "257",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/257_UC01.jpg"
+			}
+		},
+		{
+			"name": "UC02",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Artifact",
+			"collector_number": "258",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/258_UC02.jpg"
+			}
+		},
+		{
+			"name": "UC03",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Artifact",
+			"collector_number": "259",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/259_UC03.jpg"
+			}
+		},
+		{
+			"name": "UC04",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Artifact",
+			"collector_number": "260",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/260_UC04.jpg"
+			}
+		},
+		{
+			"name": "UC05",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Artifact",
+			"collector_number": "261",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/261_UC05.jpg"
+			}
+		},
+		{
+			"name": "RW01",
+			"rarity": "rare",
+			"mana_cost": "{W}",
+			"type": "",
+			"collector_number": "14",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/14_RW01.jpg"
+			}
+		},
+		{
+			"name": "RW02",
+			"rarity": "rare",
+			"mana_cost": "{W}",
+			"type": "",
+			"collector_number": "15",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/15_RW02.jpg"
+			}
+		},
+		{
+			"name": "RW03",
+			"rarity": "rare",
+			"mana_cost": "{W}",
+			"type": "",
+			"collector_number": "16",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/16_RW03.jpg"
+			}
+		},
+		{
+			"name": "RW04",
+			"rarity": "rare",
+			"mana_cost": "{W}",
+			"type": "",
+			"collector_number": "17",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/17_RW04.jpg"
+			}
+		},
+		{
+			"name": "RW05",
+			"rarity": "rare",
+			"mana_cost": "{W}",
+			"type": "",
+			"collector_number": "18",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/18_RW05.jpg"
+			}
+		},
+		{
+			"name": "RW06",
+			"rarity": "rare",
+			"mana_cost": "{W}",
+			"type": "",
+			"collector_number": "19",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/19_RW06.jpg"
+			}
+		},
+		{
+			"name": "RU01",
+			"rarity": "rare",
+			"mana_cost": "{U}",
+			"type": "",
+			"collector_number": "44",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/44_RU01.jpg"
+			}
+		},
+		{
+			"name": "RU02",
+			"rarity": "rare",
+			"mana_cost": "{U}",
+			"type": "",
+			"collector_number": "45",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/45_RU02.jpg"
+			}
+		},
+		{
+			"name": "RU03",
+			"rarity": "rare",
+			"mana_cost": "{U}",
+			"type": "",
+			"collector_number": "46",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/46_RU03.jpg"
+			}
+		},
+		{
+			"name": "RU04",
+			"rarity": "rare",
+			"mana_cost": "{U}",
+			"type": "",
+			"collector_number": "47",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/47_RU04.jpg"
+			}
+		},
+		{
+			"name": "RU05",
+			"rarity": "rare",
+			"mana_cost": "{U}",
+			"type": "",
+			"collector_number": "48",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/48_RU05.jpg"
+			}
+		},
+		{
+			"name": "RU06",
+			"rarity": "rare",
+			"mana_cost": "{U}",
+			"type": "",
+			"collector_number": "49",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/49_RU06.jpg"
+			}
+		},
+		{
+			"name": "RB01",
+			"rarity": "rare",
+			"mana_cost": "{B}",
+			"type": "",
+			"collector_number": "74",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/74_RB01.jpg"
+			}
+		},
+		{
+			"name": "RB03",
+			"rarity": "rare",
+			"mana_cost": "{B}",
+			"type": "",
+			"collector_number": "76",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/76_RB03.jpg"
+			}
+		},
+		{
+			"name": "RB02",
+			"rarity": "rare",
+			"mana_cost": "{B}",
+			"type": "",
+			"collector_number": "75",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/75_RB02.jpg"
+			}
+		},
+		{
+			"name": "RB04",
+			"rarity": "rare",
+			"mana_cost": "{B}",
+			"type": "",
+			"collector_number": "77",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/77_RB04.jpg"
+			}
+		},
+		{
+			"name": "RB05",
+			"rarity": "rare",
+			"mana_cost": "{B}",
+			"type": "",
+			"collector_number": "78",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/78_RB05.jpg"
+			}
+		},
+		{
+			"name": "RB06",
+			"rarity": "rare",
+			"mana_cost": "{B}",
+			"type": "",
+			"collector_number": "79",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/79_RB06.jpg"
+			}
+		},
+		{
+			"name": "RR01",
+			"rarity": "rare",
+			"mana_cost": "{R}",
+			"type": "",
+			"collector_number": "104",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/104_RR01.jpg"
+			}
+		},
+		{
+			"name": "RR02",
+			"rarity": "rare",
+			"mana_cost": "{R}",
+			"type": "",
+			"collector_number": "105",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/105_RR02.jpg"
+			}
+		},
+		{
+			"name": "RR03",
+			"rarity": "rare",
+			"mana_cost": "{R}",
+			"type": "",
+			"collector_number": "106",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/106_RR03.jpg"
+			}
+		},
+		{
+			"name": "RR04",
+			"rarity": "rare",
+			"mana_cost": "{R}",
+			"type": "",
+			"collector_number": "107",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/107_RR04.jpg"
+			}
+		},
+		{
+			"name": "RR05",
+			"rarity": "rare",
+			"mana_cost": "{R}",
+			"type": "",
+			"collector_number": "108",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/108_RR05.jpg"
+			}
+		},
+		{
+			"name": "RR06",
+			"rarity": "rare",
+			"mana_cost": "{R}",
+			"type": "",
+			"collector_number": "109",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/109_RR06.jpg"
+			}
+		},
+		{
+			"name": "RG01",
+			"rarity": "rare",
+			"mana_cost": "{G}",
+			"type": "",
+			"collector_number": "134",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/134_RG01.jpg"
+			}
+		},
+		{
+			"name": "RG02",
+			"rarity": "rare",
+			"mana_cost": "{G}",
+			"type": "",
+			"collector_number": "135",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/135_RG02.jpg"
+			}
+		},
+		{
+			"name": "RG03",
+			"rarity": "rare",
+			"mana_cost": "{G}",
+			"type": "",
+			"collector_number": "136",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/136_RG03.jpg"
+			}
+		},
+		{
+			"name": "RG04",
+			"rarity": "rare",
+			"mana_cost": "{G}",
+			"type": "",
+			"collector_number": "137",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/137_RG04.jpg"
+			}
+		},
+		{
+			"name": "RG05",
+			"rarity": "rare",
+			"mana_cost": "{G}",
+			"type": "",
+			"collector_number": "138",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/138_RG05.jpg"
+			}
+		},
+		{
+			"name": "RG06",
+			"rarity": "rare",
+			"mana_cost": "{G}",
+			"type": "",
+			"collector_number": "139",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/139_RG06.jpg"
+			}
+		},
+		{
+			"name": "MW01",
+			"rarity": "mythic",
+			"mana_cost": "{W}",
+			"type": "",
+			"collector_number": "12",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/12_MW01.jpg"
+			}
+		},
+		{
+			"name": "MW02",
+			"rarity": "mythic",
+			"mana_cost": "{W}",
+			"type": "",
+			"collector_number": "13",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/13_MW02.jpg"
+			}
+		},
+		{
+			"name": "MU01",
+			"rarity": "mythic",
+			"mana_cost": "{U}",
+			"type": "",
+			"collector_number": "42",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/42_MU01.jpg"
+			}
+		},
+		{
+			"name": "MU02",
+			"rarity": "mythic",
+			"mana_cost": "{4}{U}{U}",
+			"type": "Sorcery",
+			"collector_number": "43",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/43_MU02.jpg"
+			}
+		},
+		{
+			"name": "MB01",
+			"rarity": "mythic",
+			"mana_cost": "{B}",
+			"type": "",
+			"collector_number": "72",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/72_MB01.jpg"
+			}
+		},
+		{
+			"name": "MB02",
+			"rarity": "mythic",
+			"mana_cost": "{B}",
+			"type": "",
+			"collector_number": "73",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/73_MB02.jpg"
+			}
+		},
+		{
+			"name": "MR01",
+			"rarity": "mythic",
+			"mana_cost": "{R}",
+			"type": "",
+			"collector_number": "102",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/102_MR01.jpg"
+			}
+		},
+		{
+			"name": "MR02",
+			"rarity": "mythic",
+			"mana_cost": "{R}",
+			"type": "",
+			"collector_number": "103",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/103_MR02.jpg"
+			}
+		},
+		{
+			"name": "MG01",
+			"rarity": "mythic",
+			"mana_cost": "{G}",
+			"type": "",
+			"collector_number": "132",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/132_MG01.jpg"
+			}
+		},
+		{
+			"name": "MG02",
+			"rarity": "mythic",
+			"mana_cost": "{G}",
+			"type": "",
+			"collector_number": "133",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/133_MG02.jpg"
+			}
+		},
+		{
+			"name": "CL01 Boros Guildgate",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land — Gate",
+			"collector_number": "262",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/262_CL01 Boros Guildgate.jpg"
+			}
+		},
+		{
+			"name": "CL02 Dimir Guildgate",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land — Gate",
+			"collector_number": "263",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/263_CL02 Dimir Guildgate.jpg"
+			}
+		},
+		{
+			"name": "CL03 Orzhov Guildgate",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land — Gate",
+			"collector_number": "264",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/264_CL03 Orzhov Guildgate.jpg"
+			}
+		},
+		{
+			"name": "CL04 Gruul Guildgate",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land — Gate",
+			"collector_number": "265",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/265_CL04 Gruul Guildgate.jpg"
+			}
+		},
+		{
+			"name": "CL05 Simic Guildgate",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land — Gate",
+			"collector_number": "266",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/266_CL05 Simic Guildgate.jpg"
+			}
+		},
+		{
+			"name": "CL06 Gateway Thoroughfare",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "267",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/267_CL06 Gateway Thoroughfare.jpg"
+			}
+		},
+		{
+			"name": "UL01 Elegant Parlor",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Mountain Plains",
+			"collector_number": "273",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/273_UL01 Elegant Parlor.jpg"
+			}
+		},
+		{
+			"name": "UL02 Undercity Sewers",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Island Swamp",
+			"collector_number": "274",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/274_UL02 Undercity Sewers.jpg"
+			}
+		},
+		{
+			"name": "UL03 Shadowy Backstreet",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Plains Swamp",
+			"collector_number": "275",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/275_UL03 Shadowy Backstreet.jpg"
+			}
+		},
+		{
+			"name": "UL04 Commercial District",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Mountain Forest",
+			"collector_number": "276",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/276_UL04 Commercial District.jpg"
+			}
+		},
+		{
+			"name": "UL05 Hedge Maze",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Forest Island",
+			"collector_number": "277",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/277_UL05 Hedge Maze.jpg"
+			}
+		},
+		{
+			"name": "RL01 Boros Waystation",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "268",
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://ptmcm.github.io/sets/RAR-files/img/268_RL01 Boros Waystation_back.jpg"
+				}
+			},
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/268_RL01 Boros Waystation_front.jpg"
+			}
+		},
+		{
+			"name": "RL02 Dimir Waystation",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "269",
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://ptmcm.github.io/sets/RAR-files/img/269_RL02 Dimir Waystation_back.jpg"
+				}
+			},
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/269_RL02 Dimir Waystation_front.jpg"
+			}
+		},
+		{
+			"name": "RL03 Orzhov Waystation",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "270",
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://ptmcm.github.io/sets/RAR-files/img/270_RL03 Orzhov Waystation_back.jpg"
+				}
+			},
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/270_RL03 Orzhov Waystation_front.jpg"
+			}
+		},
+		{
+			"name": "RL04 Gruul Waystation",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "271",
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://ptmcm.github.io/sets/RAR-files/img/271_RL04 Gruul Waystation_back.jpg"
+				}
+			},
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/271_RL04 Gruul Waystation_front.jpg"
+			}
+		},
+		{
+			"name": "RL05 Simic Waystation",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "272",
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://ptmcm.github.io/sets/RAR-files/img/272_RL05 Simic Waystation_back.jpg"
+				}
+			},
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/272_RL05 Simic Waystation_front.jpg"
+			}
+		},
+		{
+			"name": "CU11 Excytose",
+			"rarity": "common",
+			"mana_cost": "{3}{U}",
+			"type": "Instant",
+			"collector_number": "41",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/41_CU11 Excytose.jpg"
+			}
+		},
+		{
+			"name": "MM01",
+			"rarity": "mythic",
+			"mana_cost": "{W}{U}{B}{R}{G}",
+			"type": "Creature",
+			"collector_number": "168",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/168_MM01.jpg"
+			}
+		},
+		{
+			"name": "CRW03 Gleaming Bulwark",
+			"rarity": "common",
+			"mana_cost": "{2}{R}{W}",
+			"type": "Creature — Giant Soldier",
+			"collector_number": "159",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/159_CRW03 Gleaming Bulwark.jpg"
+			}
+		},
+		{
+			"name": "CRW02 Legion Mage-Priest",
+			"rarity": "common",
+			"mana_cost": "{1}{R}{W}",
+			"type": "Creature — Elephant Cleric",
+			"collector_number": "158",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/158_CRW02 Legion Mage-Priest.jpg"
+			}
+		},
+		{
+			"name": "CRW04 Fresh-Faced Recruit",
+			"rarity": "common",
+			"mana_cost": "{1}{R/W}",
+			"type": "Creature — Human Soldier",
+			"collector_number": "229",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/229_CRW04 Fresh-Faced Recruit.jpg"
+			}
+		},
+		{
+			"name": "CRW01 Skyknight Legionnaire",
+			"rarity": "common",
+			"mana_cost": "{1}{R}{W}",
+			"type": "Creature — Human Knight",
+			"collector_number": "157",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/157_CRW01 Skyknight Legionnaire.jpg"
+			}
+		},
+		{
+			"name": "URW01 Paragon of Fortification",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{W}",
+			"type": "Creature — Human Soldier",
+			"collector_number": "212",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/212_URW01 Paragon of Fortification.jpg"
+			}
+		},
+		{
+			"name": "URW03 Legion Swordmaster",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}{R/W}{W}",
+			"type": "Creature — Human Soldier",
+			"collector_number": "243",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/243_URW03 Legion Swordmaster.jpg"
+			}
+		},
+		{
+			"name": "URW02 Ordruun Strategist",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}{W}",
+			"type": "Creature — Minotaur Wizard",
+			"collector_number": "213",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/213_URW02 Ordruun Strategist.jpg"
+			}
+		},
+		{
+			"name": "URW04 Boros Charm",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{W}",
+			"type": "Instant",
+			"collector_number": "214",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/214_URW04 Boros Charm.jpg"
+			}
+		},
+		{
+			"name": "URW05 Rip Apart",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{W}",
+			"type": "Sorcery",
+			"collector_number": "215",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/215_URW05 Rip Apart.jpg"
+			}
+		},
+		{
+			"name": "URW06 Stunning Directive",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{W}",
+			"type": "Instant",
+			"collector_number": "216",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/216_URW06 Stunning Directive.jpg"
+			}
+		},
+		{
+			"name": "URW07 Aurelia's Guildmage",
+			"rarity": "uncommon",
+			"mana_cost": "{R/W}{R/W}",
+			"type": "Creature — Minotaur Wizard",
+			"collector_number": "244",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/244_URW07 Aurelia's Guildmage.jpg"
+			}
+		},
+		{
+			"name": "URW08 Firemanes' Grace",
+			"rarity": "uncommon",
+			"mana_cost": "{R/W}",
+			"type": "Enchantment — Aura",
+			"collector_number": "245",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/245_URW08 Firemanes' Grace.jpg"
+			}
+		},
+		{
+			"name": "CUB01 Three-mana creature",
+			"rarity": "common",
+			"mana_cost": "{1}{U}{B}",
+			"type": "Creature — Human Assassin",
+			"collector_number": "160",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/160_CUB01 Three-mana creature.jpg"
+			}
+		},
+		{
+			"name": "CUB02 Notion Rain",
+			"rarity": "common",
+			"mana_cost": "{1}{U}{B}",
+			"type": "Sorcery",
+			"collector_number": "161",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/161_CUB02 Notion Rain.jpg"
+			}
+		},
+		{
+			"name": "CUB03 Gateway Ambush",
+			"rarity": "common",
+			"mana_cost": "{2}{U}{B}",
+			"type": "Instant",
+			"collector_number": "162",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/162_CUB03 Gateway Ambush.jpg"
+			}
+		},
+		{
+			"name": "CUB04 Stern Strongarm",
+			"rarity": "common",
+			"mana_cost": "{1}{U/B}",
+			"type": "Creature — Minotaur Mercenary",
+			"collector_number": "230",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/230_CUB04 Stern Strongarm.jpg"
+			}
+		},
+		{
+			"name": "UUB08 Lazav's Guildmage",
+			"rarity": "uncommon",
+			"mana_cost": "{U/B}{U/B}",
+			"type": "Creature — Vampire Wizard",
+			"collector_number": "248",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/248_UUB08 Lazav's Guildmage.jpg"
+			}
+		},
+		{
+			"name": "UUB02 Goldbrid creature",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{U/B}{B}",
+			"type": "Creature",
+			"collector_number": "246",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/246_UUB02 Goldbrid creature.jpg"
+			}
+		},
+		{
+			"name": "UUB01 Recon Specialist",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{B}",
+			"type": "Creature — Human Rogue",
+			"collector_number": "217",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/217_UUB01 Recon Specialist.jpg"
+			}
+		},
+		{
+			"name": "UUB03 Dinrova Abductor",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{U}{B}",
+			"type": "Creature",
+			"collector_number": "218",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/218_UUB03 Dinrova Abductor.jpg"
+			}
+		},
+		{
+			"name": "UUB05 Muffle",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{B}",
+			"type": "Instant",
+			"collector_number": "220",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/220_UUB05 Muffle.jpg"
+			}
+		},
+		{
+			"name": "UUB06 Noncreature",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}{B}",
+			"type": "Instant",
+			"collector_number": "221",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/221_UUB06 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "UUB04 Dimir Charm",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{B}",
+			"type": "Instant",
+			"collector_number": "219",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/219_UUB04 Dimir Charm.jpg"
+			}
+		},
+		{
+			"name": "UUB07 Canny Courier",
+			"rarity": "uncommon",
+			"mana_cost": "{U/B}",
+			"type": "Creature — Human Advisor Rogue",
+			"collector_number": "247",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/247_UUB07 Canny Courier.jpg"
+			}
+		},
+		{
+			"name": "CWB02 Grasping Thrull",
+			"rarity": "common",
+			"mana_cost": "{3}{W}{B}",
+			"type": "Creature — Thrull",
+			"collector_number": "164",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/164_CWB02 Grasping Thrull.jpg"
+			}
+		},
+		{
+			"name": "CWB01 Graceful Consecrant",
+			"rarity": "common",
+			"mana_cost": "{W}{B}",
+			"type": "Creature — Human Cleric",
+			"collector_number": "163",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/163_CWB01 Graceful Consecrant.jpg"
+			}
+		},
+		{
+			"name": "CWB04 Unfeeling Ministrant",
+			"rarity": "common",
+			"mana_cost": "{1}{W/B}",
+			"type": "Creature — Vampire Cleric",
+			"collector_number": "231",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/231_CWB04 Unfeeling Ministrant.jpg"
+			}
+		},
+		{
+			"name": "CWB03 Visions of Gold",
+			"rarity": "common",
+			"mana_cost": "{W}{B}",
+			"type": "Enchantment — Aura",
+			"collector_number": "165",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/165_CWB03 Visions of Gold.jpg"
+			}
+		},
+		{
+			"name": "UWB03 Syndicate Soulbinder",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{W}{W/B}{B}",
+			"type": "Creature — Angel",
+			"collector_number": "249",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/249_UWB03 Syndicate Soulbinder.jpg"
+			}
+		},
+		{
+			"name": "UWB02 Blessing Broker",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{B}",
+			"type": "Creature — Human Cleric",
+			"collector_number": "223",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/223_UWB02 Blessing Broker.jpg"
+			}
+		},
+		{
+			"name": "UWB01 Leeching Advokist",
+			"rarity": "uncommon",
+			"mana_cost": "{W}{B}",
+			"type": "Creature — Vampire Advisor",
+			"collector_number": "222",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/222_UWB01 Leeching Advokist.jpg"
+			}
+		},
+		{
+			"name": "UWB04 Orzhov Charm",
+			"rarity": "uncommon",
+			"mana_cost": "{W}{B}",
+			"type": "Instant",
+			"collector_number": "224",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/224_UWB04 Orzhov Charm.jpg"
+			}
+		},
+		{
+			"name": "UWB05 Gift of Ascension",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{B}",
+			"type": "Enchantment — Aura",
+			"collector_number": "225",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/225_UWB05 Gift of Ascension.jpg"
+			}
+		},
+		{
+			"name": "UWB06 Kaya's Cunning",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{B}",
+			"type": "Enchantment",
+			"collector_number": "226",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/226_UWB06 Kaya's Cunning.jpg"
+			}
+		},
+		{
+			"name": "UWB07 Tomik's Guildmage",
+			"rarity": "uncommon",
+			"mana_cost": "{W/B}{W/B}",
+			"type": "Creature — Human Advisor",
+			"collector_number": "250",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/250_UWB07 Tomik's Guildmage.jpg"
+			}
+		},
+		{
+			"name": "UWB08 Recall the Debtors",
+			"rarity": "uncommon",
+			"mana_cost": "{W/B}",
+			"type": "Sorcery",
+			"collector_number": "251",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/251_UWB08 Recall the Debtors.jpg"
+			}
+		},
+		{
+			"name": "CRG01 Rubblebelt Rabble-Rouser",
+			"rarity": "common",
+			"mana_cost": "{1}{R}{G}",
+			"type": "Creature — Human Rogue",
+			"collector_number": "154",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/154_CRG01 Rubblebelt Rabble-Rouser.jpg"
+			}
+		},
+		{
+			"name": "CRG02 Cindervine Kindler",
+			"rarity": "common",
+			"mana_cost": "{2}{R}{G}",
+			"type": "Creature — Elemental",
+			"collector_number": "155",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/155_CRG02 Cindervine Kindler.jpg"
+			}
+		},
+		{
+			"name": "CRG03 Savage Smash",
+			"rarity": "common",
+			"mana_cost": "{1}{R}{G}",
+			"type": "Sorcery",
+			"collector_number": "156",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/156_CRG03 Savage Smash.jpg"
+			}
+		},
+		{
+			"name": "CRG04 Wandering Trog",
+			"rarity": "common",
+			"mana_cost": "{R/G}",
+			"type": "Creature — Human Shaman",
+			"collector_number": "228",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/228_CRG04 Wandering Trog.jpg"
+			}
+		},
+		{
+			"name": "URG01 Battle-Trance Instigator",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{G}",
+			"type": "Creature — Goblin Warrior",
+			"collector_number": "207",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/207_URG01 Battle-Trance Instigator.jpg"
+			}
+		},
+		{
+			"name": "URG02 Scab-Clan Firebrand",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}{G}",
+			"type": "Creature — Ogre Warrior",
+			"collector_number": "208",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/208_URG02 Scab-Clan Firebrand.jpg"
+			}
+		},
+		{
+			"name": "URG03 Four-mana creature",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}{R/G}{G}",
+			"type": "Creature — Beast",
+			"collector_number": "240",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/240_URG03 Four-mana creature.jpg"
+			}
+		},
+		{
+			"name": "URG04 Zhur-Taa Beast-Friend",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{R}{G}",
+			"type": "Creature — Human Shaman",
+			"collector_number": "209",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/209_URG04 Zhur-Taa Beast-Friend.jpg"
+			}
+		},
+		{
+			"name": "URG05 Gruul Charm",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{G}",
+			"type": "Instant",
+			"collector_number": "210",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/210_URG05 Gruul Charm.jpg"
+			}
+		},
+		{
+			"name": "URG06 Pummel",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{G}",
+			"type": "Sorcery",
+			"collector_number": "211",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/211_URG06 Pummel.jpg"
+			}
+		},
+		{
+			"name": "URG07 Borborygmos' Guildmage",
+			"rarity": "uncommon",
+			"mana_cost": "{R/G}{R/G}",
+			"type": "Creature — Human Shaman",
+			"collector_number": "241",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/241_URG07 Borborygmos' Guildmage.jpg"
+			}
+		},
+		{
+			"name": "URG08 Tremendous Growth",
+			"rarity": "uncommon",
+			"mana_cost": "{R/G}",
+			"type": "Instant",
+			"collector_number": "242",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/242_URG08 Tremendous Growth.jpg"
+			}
+		},
+		{
+			"name": "CGU01 Three-mana creature",
+			"rarity": "common",
+			"mana_cost": "{1}{G}{U}",
+			"type": "Creature — Lizard Insect",
+			"collector_number": "151",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/151_CGU01 Three-mana creature.jpg"
+			}
+		},
+		{
+			"name": "CGU02 Four-mana creature",
+			"rarity": "common",
+			"mana_cost": "{2}{G}{U}",
+			"type": "Creature — Crab Plant Beast",
+			"collector_number": "152",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/152_CGU02 Four-mana creature.jpg"
+			}
+		},
+		{
+			"name": "CGU03 Noncreature",
+			"rarity": "common",
+			"mana_cost": "{G}{U}",
+			"type": "Instant",
+			"collector_number": "153",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/153_CGU03 Noncreature.jpg"
+			}
+		},
+		{
+			"name": "CGU04 Splintering Sentry",
+			"rarity": "common",
+			"mana_cost": "{4}{G/U}{G/U}",
+			"type": "Creature — Human Crab Warrior",
+			"collector_number": "227",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/227_CGU04 Splintering Sentry.jpg"
+			}
+		},
+		{
+			"name": "UGU02 Adapted Security",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}{U}",
+			"type": "Creature — Human Crab Warrior",
+			"collector_number": "203",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/203_UGU02 Adapted Security.jpg"
+			}
+		},
+		{
+			"name": "UGU04 Bioengineered Calf",
+			"rarity": "uncommon",
+			"mana_cost": "{4}{G}{U}",
+			"type": "Creature — Hippo Beast",
+			"collector_number": "204",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/204_UGU04 Bioengineered Calf.jpg"
+			}
+		},
+		{
+			"name": "UGU01 Not!Gyre Engineer",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}{U}",
+			"type": "Creature — Vedalken Wizard",
+			"collector_number": "202",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/202_UGU01 Not!Gyre Engineer.jpg"
+			}
+		},
+		{
+			"name": "UGU03 Goldbrid",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}{G/U}{U}",
+			"type": "Creature — Human Merfolk Wizard",
+			"collector_number": "237",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/237_UGU03 Goldbrid.jpg"
+			}
+		},
+		{
+			"name": "UGU05 Simic Charm",
+			"rarity": "uncommon",
+			"mana_cost": "{G}{U}",
+			"type": "Instant",
+			"collector_number": "205",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/205_UGU05 Simic Charm.jpg"
+			}
+		},
+		{
+			"name": "UGU06 Gather Materials",
+			"rarity": "uncommon",
+			"mana_cost": "{G}{U}",
+			"type": "Sorcery",
+			"collector_number": "206",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/206_UGU06 Gather Materials.jpg"
+			}
+		},
+		{
+			"name": "UGU07 Vannifar's Guildmage",
+			"rarity": "uncommon",
+			"mana_cost": "{G/U}{G/U}",
+			"type": "Creature",
+			"collector_number": "238",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/238_UGU07 Vannifar's Guildmage.jpg"
+			}
+		},
+		{
+			"name": "UGU08 Fin-Clade Deep-Creeper",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G/U}",
+			"type": "Creature — Merfolk Octopus Warrior",
+			"collector_number": "239",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/239_UGU08 Fin-Clade Deep-Creeper.jpg"
+			}
+		},
+		{
+			"name": "RRW05",
+			"rarity": "rare",
+			"mana_cost": "{R}{W}",
+			"type": "",
+			"collector_number": "191",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/191_RRW05.jpg"
+			}
+		},
+		{
+			"name": "RRW04",
+			"rarity": "rare",
+			"mana_cost": "{R}{W}",
+			"type": "",
+			"collector_number": "190",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/190_RRW04.jpg"
+			}
+		},
+		{
+			"name": "RRW02",
+			"rarity": "rare",
+			"mana_cost": "{R}{W}",
+			"type": "",
+			"collector_number": "188",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/188_RRW02.jpg"
+			}
+		},
+		{
+			"name": "RRW01",
+			"rarity": "rare",
+			"mana_cost": "{R}{W}",
+			"type": "",
+			"collector_number": "187",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/187_RRW01.jpg"
+			}
+		},
+		{
+			"name": "RRW03",
+			"rarity": "rare",
+			"mana_cost": "{R}{W}",
+			"type": "",
+			"collector_number": "189",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/189_RRW03.jpg"
+			}
+		},
+		{
+			"name": "RRW06 Hybrid",
+			"rarity": "rare",
+			"mana_cost": "{R/W}",
+			"type": "",
+			"collector_number": "234",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/234_RRW06 Hybrid.jpg"
+			}
+		},
+		{
+			"name": "RUB03",
+			"rarity": "rare",
+			"mana_cost": "{U}{B}",
+			"type": "",
+			"collector_number": "194",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/194_RUB03.jpg"
+			}
+		},
+		{
+			"name": "RUB05",
+			"rarity": "rare",
+			"mana_cost": "{U}{B}",
+			"type": "",
+			"collector_number": "196",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/196_RUB05.jpg"
+			}
+		},
+		{
+			"name": "RUB02",
+			"rarity": "rare",
+			"mana_cost": "{U}{B}",
+			"type": "",
+			"collector_number": "193",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/193_RUB02.jpg"
+			}
+		},
+		{
+			"name": "RUB04",
+			"rarity": "rare",
+			"mana_cost": "{U}{B}",
+			"type": "",
+			"collector_number": "195",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/195_RUB04.jpg"
+			}
+		},
+		{
+			"name": "RUB01",
+			"rarity": "rare",
+			"mana_cost": "{U}{B}",
+			"type": "",
+			"collector_number": "192",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/192_RUB01.jpg"
+			}
+		},
+		{
+			"name": "RUB06 Hybrid",
+			"rarity": "rare",
+			"mana_cost": "{U/B}",
+			"type": "",
+			"collector_number": "235",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/235_RUB06 Hybrid.jpg"
+			}
+		},
+		{
+			"name": "RWB03",
+			"rarity": "rare",
+			"mana_cost": "{W}{B}",
+			"type": "",
+			"collector_number": "199",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/199_RWB03.jpg"
+			}
+		},
+		{
+			"name": "RWB04",
+			"rarity": "rare",
+			"mana_cost": "{W}{B}",
+			"type": "",
+			"collector_number": "200",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/200_RWB04.jpg"
+			}
+		},
+		{
+			"name": "RWB05",
+			"rarity": "rare",
+			"mana_cost": "{W}{B}",
+			"type": "",
+			"collector_number": "201",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/201_RWB05.jpg"
+			}
+		},
+		{
+			"name": "RWB02",
+			"rarity": "rare",
+			"mana_cost": "{W}{B}",
+			"type": "",
+			"collector_number": "198",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/198_RWB02.jpg"
+			}
+		},
+		{
+			"name": "RWB01",
+			"rarity": "rare",
+			"mana_cost": "{W}{B}",
+			"type": "",
+			"collector_number": "197",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/197_RWB01.jpg"
+			}
+		},
+		{
+			"name": "RWB06 Hybrid",
+			"rarity": "rare",
+			"mana_cost": "{W/B}",
+			"type": "",
+			"collector_number": "236",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/236_RWB06 Hybrid.jpg"
+			}
+		},
+		{
+			"name": "RRG02",
+			"rarity": "rare",
+			"mana_cost": "{R}{G}",
+			"type": "",
+			"collector_number": "183",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/183_RRG02.jpg"
+			}
+		},
+		{
+			"name": "RRG03",
+			"rarity": "rare",
+			"mana_cost": "{R}{G}",
+			"type": "",
+			"collector_number": "184",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/184_RRG03.jpg"
+			}
+		},
+		{
+			"name": "RRG04",
+			"rarity": "rare",
+			"mana_cost": "{R}{G}",
+			"type": "",
+			"collector_number": "185",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/185_RRG04.jpg"
+			}
+		},
+		{
+			"name": "RRG05",
+			"rarity": "rare",
+			"mana_cost": "{R}{G}",
+			"type": "",
+			"collector_number": "186",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/186_RRG05.jpg"
+			}
+		},
+		{
+			"name": "RRG01",
+			"rarity": "rare",
+			"mana_cost": "{R}{G}",
+			"type": "",
+			"collector_number": "182",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/182_RRG01.jpg"
+			}
+		},
+		{
+			"name": "RRG06 Hybrid",
+			"rarity": "rare",
+			"mana_cost": "{R/G}",
+			"type": "",
+			"collector_number": "233",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/233_RRG06 Hybrid.jpg"
+			}
+		},
+		{
+			"name": "RGU04",
+			"rarity": "rare",
+			"mana_cost": "{G}{U}",
+			"type": "",
+			"collector_number": "180",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/180_RGU04.jpg"
+			}
+		},
+		{
+			"name": "RGU05",
+			"rarity": "rare",
+			"mana_cost": "{G}{U}",
+			"type": "",
+			"collector_number": "181",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/181_RGU05.jpg"
+			}
+		},
+		{
+			"name": "RGU03",
+			"rarity": "rare",
+			"mana_cost": "{G}{U}",
+			"type": "",
+			"collector_number": "179",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/179_RGU03.jpg"
+			}
+		},
+		{
+			"name": "RGU01",
+			"rarity": "rare",
+			"mana_cost": "{G}{U}",
+			"type": "",
+			"collector_number": "177",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/177_RGU01.jpg"
+			}
+		},
+		{
+			"name": "RGU02",
+			"rarity": "rare",
+			"mana_cost": "{G}{U}",
+			"type": "",
+			"collector_number": "178",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/178_RGU02.jpg"
+			}
+		},
+		{
+			"name": "RGU06 Hybrid",
+			"rarity": "rare",
+			"mana_cost": "{G/U}",
+			"type": "",
+			"collector_number": "232",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/232_RGU06 Hybrid.jpg"
+			}
+		},
+		{
+			"name": "MRW01",
+			"rarity": "mythic",
+			"mana_cost": "{R}{W}",
+			"type": "",
+			"collector_number": "171",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/171_MRW01.jpg"
+			}
+		},
+		{
+			"name": "MRW02",
+			"rarity": "mythic",
+			"mana_cost": "{R}{W}",
+			"type": "",
+			"collector_number": "172",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/172_MRW02.jpg"
+			}
+		},
+		{
+			"name": "MUB01",
+			"rarity": "mythic",
+			"mana_cost": "{U}{B}",
+			"type": "",
+			"collector_number": "173",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/173_MUB01.jpg"
+			}
+		},
+		{
+			"name": "MUB02",
+			"rarity": "mythic",
+			"mana_cost": "{U}{B}",
+			"type": "",
+			"collector_number": "174",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/174_MUB02.jpg"
+			}
+		},
+		{
+			"name": "MWB01 Tomik Vrona, Advokist",
+			"rarity": "mythic",
+			"mana_cost": "{W}{B}",
+			"type": "Legendary Creature — Human Advisor",
+			"collector_number": "175",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/175_MWB01 Tomik Vrona, Advokist.jpg"
+			}
+		},
+		{
+			"name": "MWB02 Kaya, Freed from Burdens",
+			"rarity": "mythic",
+			"mana_cost": "{1}{W}{B}",
+			"type": "Legendary Planeswalker — Kaya",
+			"collector_number": "176",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/176_MWB02 Kaya, Freed from Burdens.jpg"
+			}
+		},
+		{
+			"name": "MRG01",
+			"rarity": "mythic",
+			"mana_cost": "{R}{G}",
+			"type": "",
+			"collector_number": "169",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/169_MRG01.jpg"
+			}
+		},
+		{
+			"name": "MRG02",
+			"rarity": "mythic",
+			"mana_cost": "{R}{G}",
+			"type": "",
+			"collector_number": "170",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/170_MRG02.jpg"
+			}
+		},
+		{
+			"name": "MGU01",
+			"rarity": "mythic",
+			"mana_cost": "{G}{U}",
+			"type": "",
+			"collector_number": "166",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/166_MGU01.jpg"
+			}
+		},
+		{
+			"name": "MGU02",
+			"rarity": "mythic",
+			"mana_cost": "{G}{U}",
+			"type": "",
+			"collector_number": "167",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/167_MGU02.jpg"
+			}
+		},
+		{
+			"name": "Forest",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Forest",
+			"collector_number": "282",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/282_Forest.jpg"
+			}
+		},
+		{
+			"name": "Island",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Island",
+			"collector_number": "279",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/279_Island.jpg"
+			}
+		},
+		{
+			"name": "Mountain",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Mountain",
+			"collector_number": "281",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/281_Mountain.jpg"
+			}
+		},
+		{
+			"name": "Plains",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Plains",
+			"collector_number": "278",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/278_Plains.jpg"
+			}
+		},
+		{
+			"name": "Swamp",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Swamp",
+			"collector_number": "280",
+			"image_uris": {
+				"en": "https://ptmcm.github.io/sets/RAR-files/img/280_Swamp.jpg"
+			}
+		}
+	]
+
+[rare(1)]
+	2 RW01
+	2 RW02
+	2 RW03
+	2 RW04
+	2 RW05
+	2 RW06
+	2 RU01
+	2 RU02
+	2 RU03
+	2 RU04
+	2 RU05
+	2 RU06
+	2 RB01
+	2 RB03
+	2 RB02
+	2 RB04
+	2 RB05
+	2 RB06
+	2 RR01
+	2 RR02
+	2 RR03
+	2 RR04
+	2 RR05
+	2 RR06
+	2 RG01
+	2 RG02
+	2 RG03
+	2 RG04
+	2 RG05
+	2 RG06
+	1 MW01
+	1 MW02
+	1 MU01
+	1 MU02
+	1 MB01
+	1 MB02
+	1 MR01
+	1 MR02
+	1 MG01
+	1 MG02
+	2 RL01 Boros Waystation
+	2 RL02 Dimir Waystation
+	2 RL03 Orzhov Waystation
+	2 RL04 Gruul Waystation
+	2 RL05 Simic Waystation
+	1 MM01
+	2 RRW05
+	2 RRW04
+	2 RRW02
+	2 RRW01
+	2 RRW03
+	2 RRW06 Hybrid
+	2 RUB03
+	2 RUB05
+	2 RUB02
+	2 RUB04
+	2 RUB01
+	2 RUB06 Hybrid
+	2 RWB03
+	2 RWB04
+	2 RWB05
+	2 RWB02
+	2 RWB01
+	2 RWB06 Hybrid
+	2 RRG02
+	2 RRG03
+	2 RRG04
+	2 RRG05
+	2 RRG01
+	2 RRG06 Hybrid
+	2 RGU04
+	2 RGU05
+	2 RGU03
+	2 RGU01
+	2 RGU02
+	2 RGU06 Hybrid
+	1 MRW01
+	1 MRW02
+	1 MUB01
+	1 MUB02
+	1 MWB01 Tomik Vrona, Advokist
+	1 MWB02 Kaya, Freed from Burdens
+	1 MRG01
+	1 MRG02
+	1 MGU01
+	1 MGU02
+[uncommon(3)]
+	4 UW01
+	4 UW02
+	4 UW03
+	4 UW04
+	4 UW05
+	4 UW06
+	4 UW07
+	4 UW08
+	4 UW09 Noncreature
+	4 UW10 Noncreature
+	4 UW11 Noncreature
+	4 UU11 Bifurcation
+	4 UU01
+	4 UU02
+	4 UU03
+	4 UU04
+	4 UU05
+	4 UU07 Noncreature
+	4 UU09 Noncreature
+	4 UU08 Noncreature
+	4 UU10 Noncreature
+	4 UU06
+	4 UB01
+	4 UB03
+	4 UB02
+	4 UB04
+	4 UB05
+	4 UB06
+	4 UB08 Noncreature
+	4 UB07 Noncreature
+	4 UB09 Noncreature
+	4 UB10 Noncreature
+	4 UB11 Noncreature
+	4 UR01
+	4 UR02
+	4 UR03
+	4 UR04
+	4 UR05
+	4 UR06 Noncreature
+	4 UR07 Noncreature
+	4 UR08 Noncreature
+	4 UR09 Noncreature
+	4 UR10 Noncreature
+	4 UR11 Noncreature
+	4 UG03
+	4 UG06
+	4 UG07
+	4 UG01
+	4 UG05
+	4 UG04
+	4 UG02
+	4 UG08 Noncreature
+	4 UG09 Noncreature
+	4 UG11 Noncreature
+	4 UG10 Noncreature
+	4 UC01
+	4 UC02
+	4 UC03
+	4 UC04
+	4 UC05
+	4 UL01 Elegant Parlor
+	4 UL02 Undercity Sewers
+	4 UL03 Shadowy Backstreet
+	4 UL04 Commercial District
+	4 UL05 Hedge Maze
+	4 URW01 Paragon of Fortification
+	4 URW03 Legion Swordmaster
+	4 URW02 Ordruun Strategist
+	4 URW04 Boros Charm
+	4 URW05 Rip Apart
+	4 URW06 Stunning Directive
+	4 URW07 Aurelia's Guildmage
+	4 URW08 Firemanes' Grace
+	4 UUB08 Lazav's Guildmage
+	4 UUB02 Goldbrid creature
+	4 UUB01 Recon Specialist
+	4 UUB03 Dinrova Abductor
+	4 UUB05 Muffle
+	4 UUB06 Noncreature
+	4 UUB04 Dimir Charm
+	4 UUB07 Canny Courier
+	4 UWB03 Syndicate Soulbinder
+	4 UWB02 Blessing Broker
+	4 UWB01 Leeching Advokist
+	4 UWB04 Orzhov Charm
+	4 UWB05 Gift of Ascension
+	4 UWB06 Kaya's Cunning
+	4 UWB07 Tomik's Guildmage
+	4 UWB08 Recall the Debtors
+	4 URG01 Battle-Trance Instigator
+	4 URG02 Scab-Clan Firebrand
+	4 URG03 Four-mana creature
+	4 URG04 Zhur-Taa Beast-Friend
+	4 URG05 Gruul Charm
+	4 URG06 Pummel
+	4 URG07 Borborygmos' Guildmage
+	4 URG08 Tremendous Growth
+	4 UGU02 Adapted Security
+	4 UGU04 Bioengineered Calf
+	4 UGU01 Not!Gyre Engineer
+	4 UGU03 Goldbrid
+	4 UGU05 Simic Charm
+	4 UGU06 Gather Materials
+	4 UGU07 Vannifar's Guildmage
+	4 UGU08 Fin-Clade Deep-Creeper
+[common(7)]
+	8 CW01 Doomed Worshipper
+	8 CW02 Blessing Hoarder
+	8 CW03 Wojek Skyknight
+	8 CW05 Luminous Piker
+	8 CW04 Syndicate Initiate
+	8 CW06 Boros Flavour
+	8 CW07 Gleaming Gatefinder
+	8 CW11 Blinding Boon
+	8 CW08 Combat-related removal
+	8 CW09 Banishing Light
+	8 CW10 Ethereal Vitality
+	8 CU02 Bane Alley Sidestepper
+	8 CU01 Secret Collector
+	8 CU03 Crypsis Clade Vanguard
+	8 CU04 Placid Skyskimmer
+	8 CU05 Combine Initiate
+	8 CU06 Clandestine Gatefinder
+	8 CU07 Shed the False Face
+	8 CU08 Decode Thoughts
+	8 CU09 Gateway Fair
+	8 CU10 Anuran Adaptation
+	8 CB01 Syndic Collector
+	8 CB03 Dimir Neuromancer
+	8 CB02 Fiend's Crawl Stalker
+	8 CB04 House Initiate
+	8 CB05 Transaction Observer
+	8 CB06 Ominous Gatefinder
+	8 CB07 Looming Debt
+	8 CB08 Profane
+	8 CB09 Bleak Blessing
+	8 CB11 Revelation of Agony
+	8 CB10 Rebuy
+	8 CR01 Legion Initiate
+	8 CR02 Firefist Charger
+	8 CR05 Bolrac-Clan Shaman
+	8 CR03 Flame-Kin Brigadier
+	8 CR04 Reborn Beast-Friend
+	8 CR06 Disorderly Gatefinder
+	8 CR07 Draw Steel
+	8 CR08 Wild Blows
+	8 CR09 Reckless Smash
+	8 CR10 Abandon the Before
+	8 CR11 Stray Bolt
+	8 CG01 Gyre-Clade Technician
+	8 CG02 Hull-Clade Infantry
+	8 CG03 Clan Initiate
+	8 CG04 Scuttling Spicrabopus
+	8 CG05 Zhur-Taa Invoker
+	8 CG06 Mahovana Dryad
+	8 CG07 Colossal Gatefinder
+	8 CG08 Ancient Adephage
+	8 CG10 Plated Punch
+	8 CG11 Traverse the Rubblebelt
+	8 CG09 Begin the Trance
+	8 CC01 Boros Guidepost
+	8 CC02 Dimir Guidepost
+	8 CC03 Orzhov Guidepost
+	8 CC04 Gruul Guidepost
+	8 CC05 Simic Guidepost
+	8 CL01 Boros Guildgate
+	8 CL02 Dimir Guildgate
+	8 CL03 Orzhov Guildgate
+	8 CL04 Gruul Guildgate
+	8 CL05 Simic Guildgate
+	8 CL06 Gateway Thoroughfare
+	8 CU11 Excytose
+	8 CRW03 Gleaming Bulwark
+	8 CRW02 Legion Mage-Priest
+	8 CRW04 Fresh-Faced Recruit
+	8 CRW01 Skyknight Legionnaire
+	8 CUB01 Three-mana creature
+	8 CUB02 Notion Rain
+	8 CUB03 Gateway Ambush
+	8 CUB04 Stern Strongarm
+	8 CWB02 Grasping Thrull
+	8 CWB01 Graceful Consecrant
+	8 CWB04 Unfeeling Ministrant
+	8 CWB03 Visions of Gold
+	8 CRG01 Rubblebelt Rabble-Rouser
+	8 CRG02 Cindervine Kindler
+	8 CRG03 Savage Smash
+	8 CRG04 Wandering Trog
+	8 CGU01 Three-mana creature
+	8 CGU02 Four-mana creature
+	8 CGU03 Noncreature
+	8 CGU04 Splintering Sentry
+[foil(1)]
+	12 CW01 Doomed Worshipper
+	12 CW02 Blessing Hoarder
+	12 CW03 Wojek Skyknight
+	12 CW05 Luminous Piker
+	12 CW04 Syndicate Initiate
+	12 CW06 Boros Flavour
+	12 CW07 Gleaming Gatefinder
+	12 CW11 Blinding Boon
+	12 CW08 Combat-related removal
+	12 CW09 Banishing Light
+	12 CW10 Ethereal Vitality
+	6 UW01
+	6 UW02
+	6 UW03
+	6 UW04
+	6 UW05
+	6 UW06
+	6 UW07
+	6 UW08
+	6 UW09 Noncreature
+	6 UW10 Noncreature
+	6 UW11 Noncreature
+	12 CU02 Bane Alley Sidestepper
+	12 CU01 Secret Collector
+	12 CU03 Crypsis Clade Vanguard
+	12 CU04 Placid Skyskimmer
+	12 CU05 Combine Initiate
+	12 CU06 Clandestine Gatefinder
+	12 CU07 Shed the False Face
+	12 CU08 Decode Thoughts
+	12 CU09 Gateway Fair
+	12 CU10 Anuran Adaptation
+	6 UU11 Bifurcation
+	6 UU01
+	6 UU02
+	6 UU03
+	6 UU04
+	6 UU05
+	6 UU07 Noncreature
+	6 UU09 Noncreature
+	6 UU08 Noncreature
+	6 UU10 Noncreature
+	6 UU06
+	12 CB01 Syndic Collector
+	12 CB03 Dimir Neuromancer
+	12 CB02 Fiend's Crawl Stalker
+	12 CB04 House Initiate
+	12 CB05 Transaction Observer
+	12 CB06 Ominous Gatefinder
+	12 CB07 Looming Debt
+	12 CB08 Profane
+	12 CB09 Bleak Blessing
+	12 CB11 Revelation of Agony
+	12 CB10 Rebuy
+	6 UB01
+	6 UB03
+	6 UB02
+	6 UB04
+	6 UB05
+	6 UB06
+	6 UB08 Noncreature
+	6 UB07 Noncreature
+	6 UB09 Noncreature
+	6 UB10 Noncreature
+	6 UB11 Noncreature
+	12 CR01 Legion Initiate
+	12 CR02 Firefist Charger
+	12 CR05 Bolrac-Clan Shaman
+	12 CR03 Flame-Kin Brigadier
+	12 CR04 Reborn Beast-Friend
+	12 CR06 Disorderly Gatefinder
+	12 CR07 Draw Steel
+	12 CR08 Wild Blows
+	12 CR09 Reckless Smash
+	12 CR10 Abandon the Before
+	12 CR11 Stray Bolt
+	6 UR01
+	6 UR02
+	6 UR03
+	6 UR04
+	6 UR05
+	6 UR06 Noncreature
+	6 UR07 Noncreature
+	6 UR08 Noncreature
+	6 UR09 Noncreature
+	6 UR10 Noncreature
+	6 UR11 Noncreature
+	12 CG01 Gyre-Clade Technician
+	12 CG02 Hull-Clade Infantry
+	12 CG03 Clan Initiate
+	12 CG04 Scuttling Spicrabopus
+	12 CG05 Zhur-Taa Invoker
+	12 CG06 Mahovana Dryad
+	12 CG07 Colossal Gatefinder
+	12 CG08 Ancient Adephage
+	12 CG10 Plated Punch
+	12 CG11 Traverse the Rubblebelt
+	12 CG09 Begin the Trance
+	6 UG03
+	6 UG06
+	6 UG07
+	6 UG01
+	6 UG05
+	6 UG04
+	6 UG02
+	6 UG08 Noncreature
+	6 UG09 Noncreature
+	6 UG11 Noncreature
+	6 UG10 Noncreature
+	12 CC01 Boros Guidepost
+	12 CC02 Dimir Guidepost
+	12 CC03 Orzhov Guidepost
+	12 CC04 Gruul Guidepost
+	12 CC05 Simic Guidepost
+	6 UC01
+	6 UC02
+	6 UC03
+	6 UC04
+	6 UC05
+	2 RW01
+	2 RW02
+	2 RW03
+	2 RW04
+	2 RW05
+	2 RW06
+	2 RU01
+	2 RU02
+	2 RU03
+	2 RU04
+	2 RU05
+	2 RU06
+	2 RB01
+	2 RB03
+	2 RB02
+	2 RB04
+	2 RB05
+	2 RB06
+	2 RR01
+	2 RR02
+	2 RR03
+	2 RR04
+	2 RR05
+	2 RR06
+	2 RG01
+	2 RG02
+	2 RG03
+	2 RG04
+	2 RG05
+	2 RG06
+	1 MW01
+	1 MW02
+	1 MU01
+	1 MU02
+	1 MB01
+	1 MB02
+	1 MR01
+	1 MR02
+	1 MG01
+	1 MG02
+	12 CL01 Boros Guildgate
+	12 CL02 Dimir Guildgate
+	12 CL03 Orzhov Guildgate
+	12 CL04 Gruul Guildgate
+	12 CL05 Simic Guildgate
+	12 CL06 Gateway Thoroughfare
+	6 UL01 Elegant Parlor
+	6 UL02 Undercity Sewers
+	6 UL03 Shadowy Backstreet
+	6 UL04 Commercial District
+	6 UL05 Hedge Maze
+	2 RL01 Boros Waystation
+	2 RL02 Dimir Waystation
+	2 RL03 Orzhov Waystation
+	2 RL04 Gruul Waystation
+	2 RL05 Simic Waystation
+	12 CU11 Excytose
+	1 MM01
+	12 CRW03 Gleaming Bulwark
+	12 CRW02 Legion Mage-Priest
+	12 CRW04 Fresh-Faced Recruit
+	12 CRW01 Skyknight Legionnaire
+	6 URW01 Paragon of Fortification
+	6 URW03 Legion Swordmaster
+	6 URW02 Ordruun Strategist
+	6 URW04 Boros Charm
+	6 URW05 Rip Apart
+	6 URW06 Stunning Directive
+	6 URW07 Aurelia's Guildmage
+	6 URW08 Firemanes' Grace
+	12 CUB01 Three-mana creature
+	12 CUB02 Notion Rain
+	12 CUB03 Gateway Ambush
+	12 CUB04 Stern Strongarm
+	6 UUB08 Lazav's Guildmage
+	6 UUB02 Goldbrid creature
+	6 UUB01 Recon Specialist
+	6 UUB03 Dinrova Abductor
+	6 UUB05 Muffle
+	6 UUB06 Noncreature
+	6 UUB04 Dimir Charm
+	6 UUB07 Canny Courier
+	12 CWB02 Grasping Thrull
+	12 CWB01 Graceful Consecrant
+	12 CWB04 Unfeeling Ministrant
+	12 CWB03 Visions of Gold
+	6 UWB03 Syndicate Soulbinder
+	6 UWB02 Blessing Broker
+	6 UWB01 Leeching Advokist
+	6 UWB04 Orzhov Charm
+	6 UWB05 Gift of Ascension
+	6 UWB06 Kaya's Cunning
+	6 UWB07 Tomik's Guildmage
+	6 UWB08 Recall the Debtors
+	12 CRG01 Rubblebelt Rabble-Rouser
+	12 CRG02 Cindervine Kindler
+	12 CRG03 Savage Smash
+	12 CRG04 Wandering Trog
+	6 URG01 Battle-Trance Instigator
+	6 URG02 Scab-Clan Firebrand
+	6 URG03 Four-mana creature
+	6 URG04 Zhur-Taa Beast-Friend
+	6 URG05 Gruul Charm
+	6 URG06 Pummel
+	6 URG07 Borborygmos' Guildmage
+	6 URG08 Tremendous Growth
+	12 CGU01 Three-mana creature
+	12 CGU02 Four-mana creature
+	12 CGU03 Noncreature
+	12 CGU04 Splintering Sentry
+	6 UGU02 Adapted Security
+	6 UGU04 Bioengineered Calf
+	6 UGU01 Not!Gyre Engineer
+	6 UGU03 Goldbrid
+	6 UGU05 Simic Charm
+	6 UGU06 Gather Materials
+	6 UGU07 Vannifar's Guildmage
+	6 UGU08 Fin-Clade Deep-Creeper
+	2 RRW05
+	2 RRW04
+	2 RRW02
+	2 RRW01
+	2 RRW03
+	2 RRW06 Hybrid
+	2 RUB03
+	2 RUB05
+	2 RUB02
+	2 RUB04
+	2 RUB01
+	2 RUB06 Hybrid
+	2 RWB03
+	2 RWB04
+	2 RWB05
+	2 RWB02
+	2 RWB01
+	2 RWB06 Hybrid
+	2 RRG02
+	2 RRG03
+	2 RRG04
+	2 RRG05
+	2 RRG01
+	2 RRG06 Hybrid
+	2 RGU04
+	2 RGU05
+	2 RGU03
+	2 RGU01
+	2 RGU02
+	2 RGU06 Hybrid
+	1 MRW01
+	1 MRW02
+	1 MUB01
+	1 MUB02
+	1 MWB01 Tomik Vrona, Advokist
+	1 MWB02 Kaya, Freed from Burdens
+	1 MRG01
+	1 MRG02
+	1 MGU01
+	1 MGU02
+[wildcard(1)]
+	6 CW01 Doomed Worshipper
+	6 CW02 Blessing Hoarder
+	6 CW03 Wojek Skyknight
+	6 CW05 Luminous Piker
+	6 CW04 Syndicate Initiate
+	6 CW06 Boros Flavour
+	6 CW07 Gleaming Gatefinder
+	6 CW11 Blinding Boon
+	6 CW08 Combat-related removal
+	6 CW09 Banishing Light
+	6 CW10 Ethereal Vitality
+	15 UW01
+	15 UW02
+	15 UW03
+	15 UW04
+	15 UW05
+	15 UW06
+	15 UW07
+	15 UW08
+	15 UW09 Noncreature
+	15 UW10 Noncreature
+	15 UW11 Noncreature
+	6 CU02 Bane Alley Sidestepper
+	6 CU01 Secret Collector
+	6 CU03 Crypsis Clade Vanguard
+	6 CU04 Placid Skyskimmer
+	6 CU05 Combine Initiate
+	6 CU06 Clandestine Gatefinder
+	6 CU07 Shed the False Face
+	6 CU08 Decode Thoughts
+	6 CU09 Gateway Fair
+	6 CU10 Anuran Adaptation
+	15 UU11 Bifurcation
+	15 UU01
+	15 UU02
+	15 UU03
+	15 UU04
+	15 UU05
+	15 UU07 Noncreature
+	15 UU09 Noncreature
+	15 UU08 Noncreature
+	15 UU10 Noncreature
+	15 UU06
+	6 CB01 Syndic Collector
+	6 CB03 Dimir Neuromancer
+	6 CB02 Fiend's Crawl Stalker
+	6 CB04 House Initiate
+	6 CB05 Transaction Observer
+	6 CB06 Ominous Gatefinder
+	6 CB07 Looming Debt
+	6 CB08 Profane
+	6 CB09 Bleak Blessing
+	6 CB11 Revelation of Agony
+	6 CB10 Rebuy
+	15 UB01
+	15 UB03
+	15 UB02
+	15 UB04
+	15 UB05
+	15 UB06
+	15 UB08 Noncreature
+	15 UB07 Noncreature
+	15 UB09 Noncreature
+	15 UB10 Noncreature
+	15 UB11 Noncreature
+	6 CR01 Legion Initiate
+	6 CR02 Firefist Charger
+	6 CR05 Bolrac-Clan Shaman
+	6 CR03 Flame-Kin Brigadier
+	6 CR04 Reborn Beast-Friend
+	6 CR06 Disorderly Gatefinder
+	6 CR07 Draw Steel
+	6 CR08 Wild Blows
+	6 CR09 Reckless Smash
+	6 CR10 Abandon the Before
+	6 CR11 Stray Bolt
+	15 UR01
+	15 UR02
+	15 UR03
+	15 UR04
+	15 UR05
+	15 UR06 Noncreature
+	15 UR07 Noncreature
+	15 UR08 Noncreature
+	15 UR09 Noncreature
+	15 UR10 Noncreature
+	15 UR11 Noncreature
+	6 CG01 Gyre-Clade Technician
+	6 CG02 Hull-Clade Infantry
+	6 CG03 Clan Initiate
+	6 CG04 Scuttling Spicrabopus
+	6 CG05 Zhur-Taa Invoker
+	6 CG06 Mahovana Dryad
+	6 CG07 Colossal Gatefinder
+	6 CG08 Ancient Adephage
+	6 CG10 Plated Punch
+	6 CG11 Traverse the Rubblebelt
+	6 CG09 Begin the Trance
+	15 UG03
+	15 UG06
+	15 UG07
+	15 UG01
+	15 UG05
+	15 UG04
+	15 UG02
+	15 UG08 Noncreature
+	15 UG09 Noncreature
+	15 UG11 Noncreature
+	15 UG10 Noncreature
+	6 CC01 Boros Guidepost
+	6 CC02 Dimir Guidepost
+	6 CC03 Orzhov Guidepost
+	6 CC04 Gruul Guidepost
+	6 CC05 Simic Guidepost
+	15 UC01
+	15 UC02
+	15 UC03
+	15 UC04
+	15 UC05
+	7 RW01
+	7 RW02
+	7 RW03
+	7 RW04
+	7 RW05
+	7 RW06
+	7 RU01
+	7 RU02
+	7 RU03
+	7 RU04
+	7 RU05
+	7 RU06
+	7 RB01
+	7 RB03
+	7 RB02
+	7 RB04
+	7 RB05
+	7 RB06
+	7 RR01
+	7 RR02
+	7 RR03
+	7 RR04
+	7 RR05
+	7 RR06
+	7 RG01
+	7 RG02
+	7 RG03
+	7 RG04
+	7 RG05
+	7 RG06
+	4 MW01
+	4 MW02
+	4 MU01
+	4 MU02
+	4 MB01
+	4 MB02
+	4 MR01
+	4 MR02
+	4 MG01
+	4 MG02
+	6 CL01 Boros Guildgate
+	6 CL02 Dimir Guildgate
+	6 CL03 Orzhov Guildgate
+	6 CL04 Gruul Guildgate
+	6 CL05 Simic Guildgate
+	6 CL06 Gateway Thoroughfare
+	15 UL01 Elegant Parlor
+	15 UL02 Undercity Sewers
+	15 UL03 Shadowy Backstreet
+	15 UL04 Commercial District
+	15 UL05 Hedge Maze
+	7 RL01 Boros Waystation
+	7 RL02 Dimir Waystation
+	7 RL03 Orzhov Waystation
+	7 RL04 Gruul Waystation
+	7 RL05 Simic Waystation
+	6 CU11 Excytose
+	4 MM01
+	6 CRW03 Gleaming Bulwark
+	6 CRW02 Legion Mage-Priest
+	6 CRW04 Fresh-Faced Recruit
+	6 CRW01 Skyknight Legionnaire
+	15 URW01 Paragon of Fortification
+	15 URW03 Legion Swordmaster
+	15 URW02 Ordruun Strategist
+	15 URW04 Boros Charm
+	15 URW05 Rip Apart
+	15 URW06 Stunning Directive
+	15 URW07 Aurelia's Guildmage
+	15 URW08 Firemanes' Grace
+	6 CUB01 Three-mana creature
+	6 CUB02 Notion Rain
+	6 CUB03 Gateway Ambush
+	6 CUB04 Stern Strongarm
+	15 UUB08 Lazav's Guildmage
+	15 UUB02 Goldbrid creature
+	15 UUB01 Recon Specialist
+	15 UUB03 Dinrova Abductor
+	15 UUB05 Muffle
+	15 UUB06 Noncreature
+	15 UUB04 Dimir Charm
+	15 UUB07 Canny Courier
+	6 CWB02 Grasping Thrull
+	6 CWB01 Graceful Consecrant
+	6 CWB04 Unfeeling Ministrant
+	6 CWB03 Visions of Gold
+	15 UWB03 Syndicate Soulbinder
+	15 UWB02 Blessing Broker
+	15 UWB01 Leeching Advokist
+	15 UWB04 Orzhov Charm
+	15 UWB05 Gift of Ascension
+	15 UWB06 Kaya's Cunning
+	15 UWB07 Tomik's Guildmage
+	15 UWB08 Recall the Debtors
+	6 CRG01 Rubblebelt Rabble-Rouser
+	6 CRG02 Cindervine Kindler
+	6 CRG03 Savage Smash
+	6 CRG04 Wandering Trog
+	15 URG01 Battle-Trance Instigator
+	15 URG02 Scab-Clan Firebrand
+	15 URG03 Four-mana creature
+	15 URG04 Zhur-Taa Beast-Friend
+	15 URG05 Gruul Charm
+	15 URG06 Pummel
+	15 URG07 Borborygmos' Guildmage
+	15 URG08 Tremendous Growth
+	6 CGU01 Three-mana creature
+	6 CGU02 Four-mana creature
+	6 CGU03 Noncreature
+	6 CGU04 Splintering Sentry
+	15 UGU02 Adapted Security
+	15 UGU04 Bioengineered Calf
+	15 UGU01 Not!Gyre Engineer
+	15 UGU03 Goldbrid
+	15 UGU05 Simic Charm
+	15 UGU06 Gather Materials
+	15 UGU07 Vannifar's Guildmage
+	15 UGU08 Fin-Clade Deep-Creeper
+	7 RRW05
+	7 RRW04
+	7 RRW02
+	7 RRW01
+	7 RRW03
+	7 RRW06 Hybrid
+	7 RUB03
+	7 RUB05
+	7 RUB02
+	7 RUB04
+	7 RUB01
+	7 RUB06 Hybrid
+	7 RWB03
+	7 RWB04
+	7 RWB05
+	7 RWB02
+	7 RWB01
+	7 RWB06 Hybrid
+	7 RRG02
+	7 RRG03
+	7 RRG04
+	7 RRG05
+	7 RRG01
+	7 RRG06 Hybrid
+	7 RGU04
+	7 RGU05
+	7 RGU03
+	7 RGU01
+	7 RGU02
+	7 RGU06 Hybrid
+	4 MRW01
+	4 MRW02
+	4 MUB01
+	4 MUB02
+	4 MWB01 Tomik Vrona, Advokist
+	4 MWB02 Kaya, Freed from Burdens
+	4 MRG01
+	4 MRG02
+	4 MGU01
+	4 MGU02
